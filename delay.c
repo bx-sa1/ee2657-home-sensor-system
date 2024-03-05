@@ -9,10 +9,20 @@
 #include <xc.h>
 #include "delay.h"
 
+unsigned int delay;
+
+void __interrupt() isr() {
+    TMR0L = 156;
+    PIR0bits.TMR0IF = 0;
+    if(delay != 0) {
+        delay--;
+    }
+}
+
 void delay_init() {
     T0CON0 = 0b10000000;
-    T0CON1 = 0b01000011;
-    
+    T0CON1 = 0b01001010;
+    PIE0bits.TMR0IE = 1;
 }
 
 void delay(long long t, void (*f)()) {
@@ -20,16 +30,11 @@ void delay(long long t, void (*f)()) {
     TMR0L = 0;
     PIR0bits.TMR0IF=0;
     
-    while(t!=0) {
-        while(total < 1000) {
-            while(PIR0bits.TMR0IF==0) {
-                total += (TMR0L - total);
-                if(total >= 1000) break;
-                if(f != NULL) f();
-            }
-            PIR0bits.TMR0IF = 0;
+    delay = t*10;
+    
+    while(delay != 0) {
+        if(f != NULL) {
+            f();
         }
-        total = 0;
-        t--;
     }
 }

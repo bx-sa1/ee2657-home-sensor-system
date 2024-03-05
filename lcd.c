@@ -14,27 +14,27 @@ void lcd_cmd(unsigned char cmd)
 {
     LATB = 0x20 + ((cmd >> 4) & 0x0f); // enable + MSB of instruction
     LATB = (cmd >> 4) & 0x0f; // sent
-    delay(1);
+    delay(1, NULL);
     LATB = 0x20 + (cmd & 0x0f); // enable + LSB
     LATB = cmd & 0x0f; // sent
-    delay(1);
+    delay(1, NULL);
 }
 
 
 void lcd_init() {
-    delay(60);
+    delay(60, NULL);
     LATB = 0x23;
     LATB = 0x03;
-    delay(20);
+    delay(20, NULL);
     LATB = 0x23;
     LATB = 0x03;
-    delay(5);
+    delay(5, NULL);
     LATB = 0x23;
     LATB = 0x03;
-    delay(5);
+    delay(5, NULL);
     LATB = 0x23;
     LATB = 0x03;
-    delay(5);
+    delay(5, NULL);
     
     lcd_cmd(0x28);        // set 2 lines, 4 bit interface, 5x7 or 5x8 dots
     lcd_cmd(0x0c);        // set display on, no cursor displayed
@@ -46,10 +46,10 @@ void lcd_char(unsigned char c)
 {
     LATB = 0x30 + ((c >> 4) & 0x0f); // enable + MSB of char
     LATB = 0x10 + ((c >> 4) & 0x0f); // sent
-    delay(1);
+    delay(1, NULL);
     LATB = 0x30 + (c & 0x0f); // enable + LSB of char
     LATB = 0x10 + (c & 0x0f); //sent
-    delay(1);
+    delay(1, NULL);
 }
 
 void lcd_display_message(const unsigned char * mess)
