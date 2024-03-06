@@ -9,13 +9,13 @@
 #include <xc.h>
 #include "delay.h"
 
-unsigned int delay;
+unsigned int delay_time = 0;
 
 void __interrupt() isr() {
     TMR0L = 156;
     PIR0bits.TMR0IF = 0;
     if(delay != 0) {
-        delay--;
+        delay_time--;
     }
 }
 
@@ -30,9 +30,9 @@ void delay(long long t, void (*f)()) {
     TMR0L = 0;
     PIR0bits.TMR0IF=0;
     
-    delay = t*10;
+    delay_time = t*10;
     
-    while(delay != 0) {
+    while(delay_time != 0) {
         if(f != NULL) {
             f();
         }

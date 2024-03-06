@@ -7,11 +7,12 @@
 
 
 #include <xc.h>
+#include <pic16f18877.h>
 #include "tempandhum.h"
 
 void adc_init() {
     ADCON0 = 0b1000100;
-    ANSELAbits.ANSELA = 0b00000011; // Set AN0 and AN1 pin as analog
+    ANSELA = 0b00000011; // Set AN0 and AN1 pin as analog
 }
 
 unsigned int read_temperature() {
