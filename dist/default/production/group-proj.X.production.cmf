@@ -11,34 +11,27 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
+$dist/default/production\group-proj.X.production.o
+cinit CODE 0 2C 2C 4 2 1
+idloc IDLOC 5 8000 8000 4 2 1
+text1 CODE 0 30 30 63 2 1
+text2 CODE 0 1B9 1B9 1F 2 1
+text3 CODE 0 F3 F3 3E 2 1
+text4 CODE 0 16D 16D 29 2 1
+text5 CODE 0 131 131 3C 2 1
+text6 CODE 0 196 196 23 2 1
+text7 CODE 0 1E6 1E6 8 2 1
+nvBANK0 BANK0 1 20 20 8 1 1
+maintext CODE 0 93 93 60 2 1
+cstackCOMMON COMMON 1 70 70 E 1 1
+cstackBANK0 BANK0 1 28 28 3 1 1
+stringtext1 STRCODE 0 1D8 1D8 E 2 1
+intentry CODE 0 4 4 26 2 1
+config CONFIG 4 8007 8007 5 2 1
+$C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
 idloc IDLOC 5 8000 8000 4 2 1
 reset_vec CODE 0 0 0 2 2 1
-end_init CODE 0 12 12 2 2 1
-config CONFIG 4 8007 8007 5 2 1
-$dist/default/production\group-proj.X.production.o
-cinit CODE 0 14 14 4 2 1
-idloc IDLOC 5 8000 8000 4 2 1
-text1 CODE 0 424 424 2E 2 1
-text2 CODE 0 3AC 3AC 3C 2 1
-text3 CODE 0 2A6 2A6 71 2 1
-text4 CODE 0 49A 49A 1D 2 1
-text5 CODE 0 36E 36E 3E 2 1
-text6 CODE 0 452 452 29 2 1
-text7 CODE 0 3E8 3E8 3C 2 1
-text8 CODE 0 4B7 4B7 1D 2 1
-text9 CODE 0 47B 47B 1F 2 1
-text10 CODE 0 203 203 A3 2 1
-text11 CODE 0 119 119 EA 2 1
-text12 CODE 0 18 18 101 2 1
-text13 CODE 0 4E2 4E2 8 2 1
-text14 CODE 0 4EA 4EA 7 2 1
-nvBANK0 BANK0 1 6A 6A 2 1 1
-maintext CODE 0 317 317 57 2 1
-cstackCOMMON COMMON 1 70 70 E 1 1
-cstackBANK0 BANK0 1 20 20 4A 1 1
-stringtext1 STRCODE 0 4D4 4D4 E 2 1
-intentry CODE 0 4 4 E 2 1
+end_init CODE 0 2A 2A 2 2 1
 config CONFIG 4 8007 8007 5 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -46,7 +39,7 @@ config CONFIG 4 8007 8007 5 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 6C-6F 1
+RAM 2B-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
@@ -97,7 +90,7 @@ RAM 17A0-17EF 1
 RAM 1820-186F 1
 RAM 18A0-18EF 1
 RAM 1920-196F 1
-BANK0 6C-6F 1
+BANK0 2B-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -108,9 +101,9 @@ BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 2-3 2
-CONST 4F1-7FFF 2
+CONST 1EE-7FFF 2
 ENTRY 2-3 2
-ENTRY 4F1-7FFF 2
+ENTRY 1EE-7FFF 2
 SFR10 500-51F 1
 SFR11 580-59F 1
 SFR12 600-61F 1
@@ -166,7 +159,7 @@ SFR61 1E80-1EEF 1
 SFR62 1F00-1F6F 1
 SFR63 1F80-1FEF 1
 CODE 2-3 2
-CODE 4F1-7FFF 2
+CODE 1EE-7FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -221,9 +214,9 @@ BANK50 1920-196F 1
 BIGRAM 2000-2FEF 1
 EEDATA F000-F0FF 2
 STRCODE 2-3 2
-STRCODE 4F1-7FFF 2
+STRCODE 1EE-7FFF 2
 STRING 2-3 2
-STRING 4F1-7FFF 2
+STRING 1EE-7FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -238,259 +231,96 @@ STRING 4F1-7FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\group-proj.X.production.o
-14 cinit CODE >6723:C:\Users\2156982\AppData\Local\Temp\2\xcAsig.s
-14 cinit CODE >6726:C:\Users\2156982\AppData\Local\Temp\2\xcAsig.s
-14 cinit CODE >6732:C:\Users\2156982\AppData\Local\Temp\2\xcAsig.s
-14 cinit CODE >6734:C:\Users\2156982\AppData\Local\Temp\2\xcAsig.s
-15 cinit CODE >6735:C:\Users\2156982\AppData\Local\Temp\2\xcAsig.s
-16 cinit CODE >6736:C:\Users\2156982\AppData\Local\Temp\2\xcAsig.s
+2C cinit CODE >6743:C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.s
+2C cinit CODE >6746:C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.s
+2C cinit CODE >6752:C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.s
+2C cinit CODE >6754:C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.s
+2D cinit CODE >6755:C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.s
+2E cinit CODE >6756:C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.s
 4 intentry CODE >14:H:\group-proj\group-proj.X\delay.c
 6 intentry CODE >15:H:\group-proj\group-proj.X\delay.c
 9 intentry CODE >16:H:\group-proj\group-proj.X\delay.c
-B intentry CODE >18:H:\group-proj\group-proj.X\delay.c
-10 intentry CODE >20:H:\group-proj\group-proj.X\delay.c
-4EA text14 CODE >13:H:\group-proj\group-proj.X\tempandhum.c
-4EA text14 CODE >14:H:\group-proj\group-proj.X\tempandhum.c
-4ED text14 CODE >15:H:\group-proj\group-proj.X\tempandhum.c
-4F0 text14 CODE >16:H:\group-proj\group-proj.X\tempandhum.c
-4E2 text13 CODE >22:H:\group-proj\group-proj.X\delay.c
-4E2 text13 CODE >23:H:\group-proj\group-proj.X\delay.c
-4E5 text13 CODE >24:H:\group-proj\group-proj.X\delay.c
-4E7 text13 CODE >25:H:\group-proj\group-proj.X\delay.c
-4E9 text13 CODE >26:H:\group-proj\group-proj.X\delay.c
-18 text12 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-18 text12 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-19 text12 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-23 text12 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-2D text12 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-30 text12 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-33 text12 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-36 text12 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-39 text12 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-3C text12 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-3F text12 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-42 text12 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-44 text12 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-4E text12 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-58 text12 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-5B text12 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-5E text12 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-61 text12 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-64 text12 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-67 text12 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-6A text12 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-6D text12 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-71 text12 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-7B text12 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-84 text12 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-88 text12 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-8A text12 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-8B text12 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-93 text12 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-97 text12 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-9B text12 CODE >32:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-A3 text12 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-A5 text12 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-A9 text12 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-AD text12 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-B1 text12 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-B5 text12 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-B9 text12 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-BD text12 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-C1 text12 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-C5 text12 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-D5 text12 CODE >35:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-D6 text12 CODE >37:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-DE text12 CODE >38:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-E4 text12 CODE >40:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-E9 text12 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-F2 text12 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-F5 text12 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-F8 text12 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-FB text12 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-FE text12 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-101 text12 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-104 text12 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-107 text12 CODE >42:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-118 text12 CODE >43:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-119 text11 CODE >7:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-119 text11 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-11A text11 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-124 text11 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-12E text11 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-131 text11 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-134 text11 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-137 text11 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-13A text11 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-13D text11 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-140 text11 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-143 text11 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-145 text11 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-14F text11 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-159 text11 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-15C text11 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-15F text11 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-162 text11 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-165 text11 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-168 text11 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-16B text11 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-16E text11 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-177 text11 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-17B text11 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-17D text11 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-17E text11 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-186 text11 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-18A text11 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-18E text11 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-190 text11 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-194 text11 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-198 text11 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-19C text11 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1A0 text11 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1A4 text11 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1A8 text11 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1AC text11 CODE >28:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1B0 text11 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1C0 text11 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1C8 text11 CODE >31:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1CE text11 CODE >33:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1D3 text11 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1DC text11 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1DF text11 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1E2 text11 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1E5 text11 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1E8 text11 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1EB text11 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1EE text11 CODE >34:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-1F1 text11 CODE >35:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-202 text11 CODE >36:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-203 text10 CODE >12:H:\group-proj\group-proj.X\utils.c
-203 text10 CODE >15:H:\group-proj\group-proj.X\utils.c
-206 text10 CODE >18:H:\group-proj\group-proj.X\utils.c
-216 text10 CODE >20:H:\group-proj\group-proj.X\utils.c
-217 text10 CODE >21:H:\group-proj\group-proj.X\utils.c
-238 text10 CODE >22:H:\group-proj\group-proj.X\utils.c
-265 text10 CODE >23:H:\group-proj\group-proj.X\utils.c
-26F text10 CODE >20:H:\group-proj\group-proj.X\utils.c
-277 text10 CODE >20:H:\group-proj\group-proj.X\utils.c
-27D text10 CODE >20:H:\group-proj\group-proj.X\utils.c
-281 text10 CODE >26:H:\group-proj\group-proj.X\utils.c
-287 text10 CODE >28:H:\group-proj\group-proj.X\utils.c
-288 text10 CODE >29:H:\group-proj\group-proj.X\utils.c
-296 text10 CODE >28:H:\group-proj\group-proj.X\utils.c
-29A text10 CODE >28:H:\group-proj\group-proj.X\utils.c
-29E text10 CODE >32:H:\group-proj\group-proj.X\utils.c
-2A5 text10 CODE >35:H:\group-proj\group-proj.X\utils.c
-47B text9 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
-47B text9 CODE >43:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
-47D text9 CODE >45:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
-481 text9 CODE >46:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
-485 text9 CODE >47:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
-48A text9 CODE >48:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
-48F text9 CODE >49:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
-495 text9 CODE >52:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
-499 text9 CODE >53:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
-4B7 text8 CODE >28:H:\group-proj\group-proj.X\delay.c
-4B7 text8 CODE >29:H:\group-proj\group-proj.X\delay.c
-4B7 text8 CODE >30:H:\group-proj\group-proj.X\delay.c
-4B9 text8 CODE >31:H:\group-proj\group-proj.X\delay.c
-4BB text8 CODE >33:H:\group-proj\group-proj.X\delay.c
-4CC text8 CODE >35:H:\group-proj\group-proj.X\delay.c
-4CD text8 CODE >35:H:\group-proj\group-proj.X\delay.c
-4CD text8 CODE >38:H:\group-proj\group-proj.X\delay.c
-4D3 text8 CODE >40:H:\group-proj\group-proj.X\delay.c
-3E8 text7 CODE >13:H:\group-proj\group-proj.X\lcd.c
-3E9 text7 CODE >15:H:\group-proj\group-proj.X\lcd.c
-3F4 text7 CODE >16:H:\group-proj\group-proj.X\lcd.c
-3FD text7 CODE >17:H:\group-proj\group-proj.X\lcd.c
-40C text7 CODE >18:H:\group-proj\group-proj.X\lcd.c
-411 text7 CODE >19:H:\group-proj\group-proj.X\lcd.c
-414 text7 CODE >20:H:\group-proj\group-proj.X\lcd.c
-423 text7 CODE >21:H:\group-proj\group-proj.X\lcd.c
-452 text6 CODE >65:H:\group-proj\group-proj.X\lcd.c
-453 text6 CODE >67:H:\group-proj\group-proj.X\lcd.c
-459 text6 CODE >70:H:\group-proj\group-proj.X\lcd.c
-45E text6 CODE >71:H:\group-proj\group-proj.X\lcd.c
-461 text6 CODE >72:H:\group-proj\group-proj.X\lcd.c
-468 text6 CODE >73:H:\group-proj\group-proj.X\lcd.c
-46B text6 CODE >74:H:\group-proj\group-proj.X\lcd.c
-472 text6 CODE >75:H:\group-proj\group-proj.X\lcd.c
-475 text6 CODE >77:H:\group-proj\group-proj.X\lcd.c
-47A text6 CODE >78:H:\group-proj\group-proj.X\lcd.c
-36E text5 CODE >45:H:\group-proj\group-proj.X\lcd.c
-36F text5 CODE >47:H:\group-proj\group-proj.X\lcd.c
-37A text5 CODE >48:H:\group-proj\group-proj.X\lcd.c
-384 text5 CODE >49:H:\group-proj\group-proj.X\lcd.c
-393 text5 CODE >50:H:\group-proj\group-proj.X\lcd.c
-398 text5 CODE >51:H:\group-proj\group-proj.X\lcd.c
-39C text5 CODE >52:H:\group-proj\group-proj.X\lcd.c
-3AB text5 CODE >53:H:\group-proj\group-proj.X\lcd.c
-49A text4 CODE >55:H:\group-proj\group-proj.X\lcd.c
-49A text4 CODE >57:H:\group-proj\group-proj.X\lcd.c
-49C text4 CODE >58:H:\group-proj\group-proj.X\lcd.c
-49D text4 CODE >60:H:\group-proj\group-proj.X\lcd.c
-4A7 text4 CODE >61:H:\group-proj\group-proj.X\lcd.c
-4AB text4 CODE >58:H:\group-proj\group-proj.X\lcd.c
-4B6 text4 CODE >63:H:\group-proj\group-proj.X\lcd.c
-2A6 text3 CODE >24:H:\group-proj\group-proj.X\lcd.c
-2A6 text3 CODE >25:H:\group-proj\group-proj.X\lcd.c
-2B6 text3 CODE >26:H:\group-proj\group-proj.X\lcd.c
-2B9 text3 CODE >27:H:\group-proj\group-proj.X\lcd.c
-2BB text3 CODE >28:H:\group-proj\group-proj.X\lcd.c
-2CA text3 CODE >29:H:\group-proj\group-proj.X\lcd.c
-2CD text3 CODE >30:H:\group-proj\group-proj.X\lcd.c
-2CF text3 CODE >31:H:\group-proj\group-proj.X\lcd.c
-2DE text3 CODE >32:H:\group-proj\group-proj.X\lcd.c
-2E1 text3 CODE >33:H:\group-proj\group-proj.X\lcd.c
-2E3 text3 CODE >34:H:\group-proj\group-proj.X\lcd.c
-2F2 text3 CODE >35:H:\group-proj\group-proj.X\lcd.c
-2F5 text3 CODE >36:H:\group-proj\group-proj.X\lcd.c
-2F7 text3 CODE >37:H:\group-proj\group-proj.X\lcd.c
-306 text3 CODE >39:H:\group-proj\group-proj.X\lcd.c
-30A text3 CODE >40:H:\group-proj\group-proj.X\lcd.c
-30E text3 CODE >41:H:\group-proj\group-proj.X\lcd.c
-312 text3 CODE >42:H:\group-proj\group-proj.X\lcd.c
-316 text3 CODE >43:H:\group-proj\group-proj.X\lcd.c
-3AC text2 CODE >5:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3AC text2 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3AE text2 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3B4 text2 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3B6 text2 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3B7 text2 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3BC text2 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3C0 text2 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3C4 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3C9 text2 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3CB text2 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3CF text2 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3D3 text2 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3D7 text2 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3D8 text2 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3DD text2 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3E3 text2 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-3E7 text2 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-424 text1 CODE >18:H:\group-proj\group-proj.X\tempandhum.c
-424 text1 CODE >19:H:\group-proj\group-proj.X\tempandhum.c
-426 text1 CODE >20:H:\group-proj\group-proj.X\tempandhum.c
-427 text1 CODE >21:H:\group-proj\group-proj.X\tempandhum.c
-42B text1 CODE >22:H:\group-proj\group-proj.X\tempandhum.c
-432 text1 CODE >23:H:\group-proj\group-proj.X\tempandhum.c
-44D text1 CODE >24:H:\group-proj\group-proj.X\tempandhum.c
-451 text1 CODE >25:H:\group-proj\group-proj.X\tempandhum.c
-317 maintext CODE >19:H:\group-proj\group-proj.X\main.c
-317 maintext CODE >20:H:\group-proj\group-proj.X\main.c
-318 maintext CODE >21:H:\group-proj\group-proj.X\main.c
-31B maintext CODE >22:H:\group-proj\group-proj.X\main.c
-31E maintext CODE >23:H:\group-proj\group-proj.X\main.c
-321 maintext CODE >25:H:\group-proj\group-proj.X\main.c
-321 maintext CODE >26:H:\group-proj\group-proj.X\main.c
-326 maintext CODE >27:H:\group-proj\group-proj.X\main.c
-32D maintext CODE >29:H:\group-proj\group-proj.X\main.c
-335 maintext CODE >31:H:\group-proj\group-proj.X\main.c
-348 maintext CODE >32:H:\group-proj\group-proj.X\main.c
-34D maintext CODE >33:H:\group-proj\group-proj.X\main.c
-354 maintext CODE >35:H:\group-proj\group-proj.X\main.c
-36B maintext CODE >36:H:\group-proj\group-proj.X\main.c
+B intentry CODE >17:H:\group-proj\group-proj.X\delay.c
+14 intentry CODE >17:H:\group-proj\group-proj.X\delay.c
+18 intentry CODE >18:H:\group-proj\group-proj.X\delay.c
+28 intentry CODE >20:H:\group-proj\group-proj.X\delay.c
+1E6 text7 CODE >22:H:\group-proj\group-proj.X\delay.c
+1E6 text7 CODE >23:H:\group-proj\group-proj.X\delay.c
+1E9 text7 CODE >24:H:\group-proj\group-proj.X\delay.c
+1EB text7 CODE >25:H:\group-proj\group-proj.X\delay.c
+1ED text7 CODE >26:H:\group-proj\group-proj.X\delay.c
+196 text6 CODE >28:H:\group-proj\group-proj.X\delay.c
+196 text6 CODE >29:H:\group-proj\group-proj.X\delay.c
+198 text6 CODE >30:H:\group-proj\group-proj.X\delay.c
+19A text6 CODE >32:H:\group-proj\group-proj.X\delay.c
+1AB text6 CODE >34:H:\group-proj\group-proj.X\delay.c
+1AC text6 CODE >34:H:\group-proj\group-proj.X\delay.c
+1AC text6 CODE >37:H:\group-proj\group-proj.X\delay.c
+1B4 text6 CODE >34:H:\group-proj\group-proj.X\delay.c
+1B8 text6 CODE >39:H:\group-proj\group-proj.X\delay.c
+131 text5 CODE >12:H:\group-proj\group-proj.X\lcd.c
+132 text5 CODE >14:H:\group-proj\group-proj.X\lcd.c
+13D text5 CODE >15:H:\group-proj\group-proj.X\lcd.c
+146 text5 CODE >16:H:\group-proj\group-proj.X\lcd.c
+155 text5 CODE >17:H:\group-proj\group-proj.X\lcd.c
+15A text5 CODE >18:H:\group-proj\group-proj.X\lcd.c
+15D text5 CODE >19:H:\group-proj\group-proj.X\lcd.c
+16C text5 CODE >20:H:\group-proj\group-proj.X\lcd.c
+16D text4 CODE >61:H:\group-proj\group-proj.X\lcd.c
+16E text4 CODE >63:H:\group-proj\group-proj.X\lcd.c
+174 text4 CODE >66:H:\group-proj\group-proj.X\lcd.c
+179 text4 CODE >67:H:\group-proj\group-proj.X\lcd.c
+17C text4 CODE >68:H:\group-proj\group-proj.X\lcd.c
+183 text4 CODE >69:H:\group-proj\group-proj.X\lcd.c
+186 text4 CODE >70:H:\group-proj\group-proj.X\lcd.c
+18D text4 CODE >71:H:\group-proj\group-proj.X\lcd.c
+190 text4 CODE >73:H:\group-proj\group-proj.X\lcd.c
+195 text4 CODE >74:H:\group-proj\group-proj.X\lcd.c
+F3 text3 CODE >41:H:\group-proj\group-proj.X\lcd.c
+F4 text3 CODE >43:H:\group-proj\group-proj.X\lcd.c
+FF text3 CODE >44:H:\group-proj\group-proj.X\lcd.c
+109 text3 CODE >45:H:\group-proj\group-proj.X\lcd.c
+118 text3 CODE >46:H:\group-proj\group-proj.X\lcd.c
+11D text3 CODE >47:H:\group-proj\group-proj.X\lcd.c
+121 text3 CODE >48:H:\group-proj\group-proj.X\lcd.c
+130 text3 CODE >49:H:\group-proj\group-proj.X\lcd.c
+1B9 text2 CODE >51:H:\group-proj\group-proj.X\lcd.c
+1B9 text2 CODE >53:H:\group-proj\group-proj.X\lcd.c
+1BC text2 CODE >54:H:\group-proj\group-proj.X\lcd.c
+1BD text2 CODE >56:H:\group-proj\group-proj.X\lcd.c
+1C7 text2 CODE >57:H:\group-proj\group-proj.X\lcd.c
+1CC text2 CODE >54:H:\group-proj\group-proj.X\lcd.c
+1D7 text2 CODE >59:H:\group-proj\group-proj.X\lcd.c
+30 text1 CODE >23:H:\group-proj\group-proj.X\lcd.c
+30 text1 CODE >24:H:\group-proj\group-proj.X\lcd.c
+46 text1 CODE >25:H:\group-proj\group-proj.X\lcd.c
+49 text1 CODE >26:H:\group-proj\group-proj.X\lcd.c
+4B text1 CODE >27:H:\group-proj\group-proj.X\lcd.c
+5A text1 CODE >28:H:\group-proj\group-proj.X\lcd.c
+5D text1 CODE >29:H:\group-proj\group-proj.X\lcd.c
+5F text1 CODE >30:H:\group-proj\group-proj.X\lcd.c
+6E text1 CODE >31:H:\group-proj\group-proj.X\lcd.c
+71 text1 CODE >32:H:\group-proj\group-proj.X\lcd.c
+73 text1 CODE >33:H:\group-proj\group-proj.X\lcd.c
+82 text1 CODE >35:H:\group-proj\group-proj.X\lcd.c
+86 text1 CODE >36:H:\group-proj\group-proj.X\lcd.c
+8A text1 CODE >37:H:\group-proj\group-proj.X\lcd.c
+8E text1 CODE >38:H:\group-proj\group-proj.X\lcd.c
+92 text1 CODE >39:H:\group-proj\group-proj.X\lcd.c
+93 maintext CODE >57:H:\group-proj\group-proj.X\main.c
+93 maintext CODE >58:H:\group-proj\group-proj.X\main.c
+95 maintext CODE >59:H:\group-proj\group-proj.X\main.c
+96 maintext CODE >60:H:\group-proj\group-proj.X\main.c
+97 maintext CODE >61:H:\group-proj\group-proj.X\main.c
+9A maintext CODE >62:H:\group-proj\group-proj.X\main.c
+9D maintext CODE >65:H:\group-proj\group-proj.X\main.c
+A0 maintext CODE >66:H:\group-proj\group-proj.X\main.c
+B6 maintext CODE >67:H:\group-proj\group-proj.X\main.c
+B8 maintext CODE >68:H:\group-proj\group-proj.X\main.c
+CE maintext CODE >70:H:\group-proj\group-proj.X\main.c
+D3 maintext CODE >71:H:\group-proj\group-proj.X\main.c
+DA maintext CODE >73:H:\group-proj\group-proj.X\main.c
+F0 maintext CODE >74:H:\group-proj\group-proj.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -504,69 +334,49 @@ FE text12 CODE >41:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\a
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 4 0 ABS 0 - dist/default/production\group-proj.X.production.o
-read_temperature@kelvin 24 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-__Hspace_0 4F1 0 ABS 0 - -
+__Hspace_0 1EE 0 ABS 0 - -
 __Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10013 0 ABS 0 - -
-itoa@r 49 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-itoa@v 4D 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-__end_of_read_temperature 8A4 0 CODE 0 text1 dist/default/production\group-proj.X.production.o
-delay@f 28 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-delay@t 20 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
+delay@f 78 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
+delay@t 70 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_delay_init 9D4 0 CODE 0 text13 dist/default/production\group-proj.X.production.o
+__end_of_delay_init 3DC 0 CODE 0 text7 dist/default/production\group-proj.X.production.o
 __Hstrings 0 0 ABS 0 strings -
+_LATA 16 0 ABS 0 - dist/default/production\group-proj.X.production.o
 _LATB 17 0 ABS 0 - dist/default/production\group-proj.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-_itoa 406 0 CODE 0 text10 dist/default/production\group-proj.X.production.o
-_main 62E 0 CODE 0 maintext dist/default/production\group-proj.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+_main 126 0 CODE 0 maintext dist/default/production\group-proj.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\group-proj.X.production.o
-start 24 0 CODE 0 init C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-___aomod@counter 71 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-main@temp_string 58 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
+start 54 0 CODE 0 init C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
 wtemp0 7E 0 ABS 0 - dist/default/production\group-proj.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
 _ADCON0 93 0 ABS 0 - dist/default/production\group-proj.X.production.o
 _ADRESH 8D 0 ABS 0 - dist/default/production\group-proj.X.production.o
 _ADRESL 8C 0 ABS 0 - dist/default/production\group-proj.X.production.o
 _ANSELA 1F38 0 ABS 0 - dist/default/production\group-proj.X.production.o
-__end_of_lcd_cmd 848 0 CODE 0 text7 dist/default/production\group-proj.X.production.o
-__end_of___wmul 934 0 CODE 0 text9 dist/default/production\group-proj.X.production.o
+__end_of_lcd_cmd 2DA 0 CODE 0 text5 dist/default/production\group-proj.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __LnvBANK0 0 0 ABS 0 nvBANK0 -
-__end_of___aodiv 232 0 CODE 0 text12 dist/default/production\group-proj.X.production.o
-__end_of___aomod 406 0 CODE 0 text11 dist/default/production\group-proj.X.production.o
-__end_of___lwdiv 7D0 0 CODE 0 text2 dist/default/production\group-proj.X.production.o
-___aodiv@quotient 73 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-___stacklo 0 0 ABS 0 - C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-___aomod@dividend 28 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-___lwdiv@quotient 7B 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-itoa@len 4B 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-itoa@str 38 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-itoa@tmp 39 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-___aomod@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-start_initialization 28 0 CODE 0 cinit dist/default/production\group-proj.X.production.o
-lcd_display_cursor@line 79 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-?_read_temperature 20 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+___stacklo 0 0 ABS 0 - C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+start_initialization 58 0 CODE 0 cinit dist/default/production\group-proj.X.production.o
+lcd_display_cursor@line 7D 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
+__pcstackBANK0 28 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
 _T0CON0 1E 0 ABS 0 - dist/default/production\group-proj.X.production.o
 _T0CON1 1F 0 ABS 0 - dist/default/production\group-proj.X.production.o
-__end_of_lcd_display_cursor 8F6 0 CODE 0 text6 dist/default/production\group-proj.X.production.o
-_lcd_display_message 934 0 CODE 0 text4 dist/default/production\group-proj.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
+__end_of_lcd_display_cursor 32C 0 CODE 0 text4 dist/default/production\group-proj.X.production.o
+_lcd_display_message 372 0 CODE 0 text2 dist/default/production\group-proj.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -577,7 +387,7 @@ __Hbank6 0 0 ABS 0 bank6 -
 __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
-__Hcinit 30 0 CODE 0 cinit -
+__Hcinit 60 0 CODE 0 cinit -
 __Hidloc 10008 0 IDLOC 5 idloc -
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -634,7 +444,6 @@ __Hsfr61 0 0 ABS 0 sfr61 -
 __Hsfr62 0 0 ABS 0 sfr62 -
 __Hsfr63 0 0 ABS 0 sfr63 -
 __Hstack 0 0 STACK 2 stack -
-___lwdiv@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
 __Hbank10 0 0 ABS 0 bank10 -
 __Hbank11 0 0 ABS 0 bank11 -
 __Hbank12 0 0 ABS 0 bank12 -
@@ -703,7 +512,7 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
-__Lcinit 28 0 CODE 0 cinit -
+__Lcinit 58 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 5 idloc -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -764,7 +573,7 @@ _INTCONbits B 0 ABS 0 - dist/default/production\group-proj.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hheap 0 0 HEAP 7 heap -
-__Hinit 24 0 CODE 0 init -
+__Hinit 54 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -779,7 +588,7 @@ __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
 __Lheap 0 0 HEAP 7 heap -
-__Linit 24 0 CODE 0 init -
+__Linit 54 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
@@ -791,42 +600,30 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-__pstringtext1 9A8 0 STRCODE 0 stringtext1 dist/default/production\group-proj.X.production.o
+__pstringtext1 3B0 0 STRCODE 0 stringtext1 dist/default/production\group-proj.X.production.o
 __pstringtext2 0 0 STRCODE 0 stringtext2 dist/default/production\group-proj.X.production.o
-__pnvBANK0 6A 0 BANK0 1 nvBANK0 dist/default/production\group-proj.X.production.o
-_lcd_display_cursor 8A4 0 CODE 0 text6 dist/default/production\group-proj.X.production.o
-___aodiv@counter 71 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-___wmul 8F6 0 CODE 0 text9 dist/default/production\group-proj.X.production.o
-___aomod@sign 72 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
+__pnvBANK0 20 0 BANK0 1 nvBANK0 dist/default/production\group-proj.X.production.o
+_lcd_display_cursor 2DA 0 CODE 0 text4 dist/default/production\group-proj.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 int$flags 7E 0 ABS 0 - dist/default/production\group-proj.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 4F1 0 ABS 0 - -
+__S0 1EE 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 _isr 8 0 CODE 0 intentry dist/default/production\group-proj.X.production.o
-___aodiv@sign 72 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-__end_of_isr 24 0 CODE 0 intentry dist/default/production\group-proj.X.production.o
-_lcd_char 6DC 0 CODE 0 text5 dist/default/production\group-proj.X.production.o
-_lcd_init 54C 0 CODE 0 text3 dist/default/production\group-proj.X.production.o
+__end_of_isr 54 0 CODE 0 intentry dist/default/production\group-proj.X.production.o
+_lcd_char 1E6 0 CODE 0 text3 dist/default/production\group-proj.X.production.o
+_lcd_init 60 0 CODE 0 text1 dist/default/production\group-proj.X.production.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-_lcd_cmd 7D0 0 CODE 0 text7 dist/default/production\group-proj.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-__end_of_lcd_char 758 0 CODE 0 text5 dist/default/production\group-proj.X.production.o
-__end_of_lcd_init 62E 0 CODE 0 text3 dist/default/production\group-proj.X.production.o
+_lcd_cmd 262 0 CODE 0 text5 dist/default/production\group-proj.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+__end_of_lcd_char 262 0 CODE 0 text3 dist/default/production\group-proj.X.production.o
+__end_of_lcd_init 126 0 CODE 0 text1 dist/default/production\group-proj.X.production.o
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
-__end_of_lcd_display_message 96E 0 CODE 0 text4 dist/default/production\group-proj.X.production.o
+__end_of_lcd_display_message 3B0 0 CODE 0 text2 dist/default/production\group-proj.X.production.o
 _PIE0bits 716 0 ABS 0 - dist/default/production\group-proj.X.production.o
-__ptext10 406 0 CODE 0 text10 dist/default/production\group-proj.X.production.o
-__ptext11 232 0 CODE 0 text11 dist/default/production\group-proj.X.production.o
-__ptext12 30 0 CODE 0 text12 dist/default/production\group-proj.X.production.o
-__ptext13 9C4 0 CODE 0 text13 dist/default/production\group-proj.X.production.o
-__ptext14 9D4 0 CODE 0 text14 dist/default/production\group-proj.X.production.o
-___aodiv 30 0 CODE 0 text12 dist/default/production\group-proj.X.production.o
-___aomod 232 0 CODE 0 text11 dist/default/production\group-proj.X.production.o
-___lwdiv 758 0 CODE 0 text2 dist/default/production\group-proj.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -881,78 +678,61 @@ __Lbank60 0 0 BANK60 1 bank60 -
 __Lbank61 0 0 BANK61 1 bank61 -
 __Lbank62 0 0 BANK62 1 bank62 -
 __Lbank63 0 0 BANK63 1 bank63 -
-__pmaintext 62E 0 CODE 0 maintext dist/default/production\group-proj.X.production.o
+__pmaintext 126 0 CODE 0 maintext dist/default/production\group-proj.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
-lcd_display_message@i 7B 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-read_temperature@temp 22 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
+lcd_display_message@i 29 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-lcd_display_cursor@position 78 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-main@temp 68 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-___lwdiv@divisor 76 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-itoa@tp 55 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
+lcd_display_cursor@position 7C 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
 _ADCON0bits 93 0 ABS 0 - dist/default/production\group-proj.X.production.o
-_adc_init 9D4 0 CODE 0 text14 dist/default/production\group-proj.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-lcd_cmd@cmd 77 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
+lcd_cmd@cmd 7B 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR0bits 70C 0 ABS 0 - dist/default/production\group-proj.X.production.o
-__Lend_init 24 0 CODE 0 end_init -
-___aodiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-___aodiv@dividend 28 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-__end_of_adc_init 9E2 0 CODE 0 text14 dist/default/production\group-proj.X.production.o
+__Lend_init 54 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 28 0 CODE 0 cinit dist/default/production\group-proj.X.production.o
-__Hintentry 24 0 CODE 0 intentry -
+end_of_initialization 58 0 CODE 0 cinit dist/default/production\group-proj.X.production.o
+__Hintentry 54 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
-?___aodiv 20 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-?___aomod 20 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
-___lwdiv@dividend 78 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-lcd_char@c 77 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-?___lwdiv 76 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
+lcd_char@c 7B 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
-__ptext1 848 0 CODE 0 text1 dist/default/production\group-proj.X.production.o
-__ptext2 758 0 CODE 0 text2 dist/default/production\group-proj.X.production.o
-__ptext3 54C 0 CODE 0 text3 dist/default/production\group-proj.X.production.o
-__ptext4 934 0 CODE 0 text4 dist/default/production\group-proj.X.production.o
-__ptext5 6DC 0 CODE 0 text5 dist/default/production\group-proj.X.production.o
-__ptext6 8A4 0 CODE 0 text6 dist/default/production\group-proj.X.production.o
-__ptext7 7D0 0 CODE 0 text7 dist/default/production\group-proj.X.production.o
-__ptext8 96E 0 CODE 0 text8 dist/default/production\group-proj.X.production.o
-__ptext9 8F6 0 CODE 0 text9 dist/default/production\group-proj.X.production.o
+__ptext1 60 0 CODE 0 text1 dist/default/production\group-proj.X.production.o
+__ptext2 372 0 CODE 0 text2 dist/default/production\group-proj.X.production.o
+__ptext3 1E6 0 CODE 0 text3 dist/default/production\group-proj.X.production.o
+__ptext4 2DA 0 CODE 0 text4 dist/default/production\group-proj.X.production.o
+__ptext5 262 0 CODE 0 text5 dist/default/production\group-proj.X.production.o
+__ptext6 32C 0 CODE 0 text6 dist/default/production\group-proj.X.production.o
+__ptext7 3CC 0 CODE 0 text7 dist/default/production\group-proj.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
-___heap_hi 0 0 ABS 0 - C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-___heap_lo 0 0 ABS 0 - C:\Users\2156982\AppData\Local\Temp\2\xcAsig.o
-__end_of__initialization 28 0 CODE 0 cinit dist/default/production\group-proj.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+___heap_lo 0 0 ABS 0 - C:\Users\2156982.IKB\AppData\Local\Temp\3\xcAscg8.o
+__end_of__initialization 58 0 CODE 0 cinit dist/default/production\group-proj.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-_read_temperature 848 0 CODE 0 text1 dist/default/production\group-proj.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-itoa@value 30 0 BANK0 1 cstackBANK0 dist/default/production\group-proj.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-__Hend_init 28 0 CODE 0 end_init -
-__end_of_itoa 54C 0 CODE 0 text10 dist/default/production\group-proj.X.production.o
-__end_of_main 6DC 0 CODE 0 maintext dist/default/production\group-proj.X.production.o
-_delay_init 9C4 0 CODE 0 text13 dist/default/production\group-proj.X.production.o
-_delay_time 6A 0 BANK0 1 nvBANK0 dist/default/production\group-proj.X.production.o
+__Hend_init 58 0 CODE 0 end_init -
+__end_of_main 1E6 0 CODE 0 maintext dist/default/production\group-proj.X.production.o
+_delay_init 3CC 0 CODE 0 text7 dist/default/production\group-proj.X.production.o
+_delay_time 20 0 BANK0 1 nvBANK0 dist/default/production\group-proj.X.production.o
 _ADPCH 9E 0 ABS 0 - dist/default/production\group-proj.X.production.o
-__end_of_delay 9A8 0 CODE 0 text8 dist/default/production\group-proj.X.production.o
+__end_of_delay 372 0 CODE 0 text6 dist/default/production\group-proj.X.production.o
 _TMR0L 1C 0 ABS 0 - dist/default/production\group-proj.X.production.o
+_TRISA 11 0 ABS 0 - dist/default/production\group-proj.X.production.o
+_TRISB 12 0 ABS 0 - dist/default/production\group-proj.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_delay 96E 0 CODE 0 text8 dist/default/production\group-proj.X.production.o
+_delay 32C 0 CODE 0 text6 dist/default/production\group-proj.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\group-proj.X.production.o
-lcd_display_message@mess 78 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
-__initialization 28 0 CODE 0 cinit dist/default/production\group-proj.X.production.o
-___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
+lcd_display_message@mess 7C 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.production.o
+__initialization 58 0 CODE 0 cinit dist/default/production\group-proj.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -978,11 +758,11 @@ ___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\group-proj.X.
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text13 0 4E2 9C4 F 2
+text7 0 1E6 3CC 8 2
+nvBANK0 1 20 20 B 1
 cstackCOMMON 1 70 70 E 1
-cstackBANK0 1 20 20 4C 1
-stringtext1 0 4D4 9A8 E 2
-intentry 0 4 8 4D0 2
+stringtext1 0 1D8 3B0 E 2
+intentry 0 4 8 1D4 2
 reset_vec 0 0 0 2 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

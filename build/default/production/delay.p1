@@ -15,13 +15,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21275
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 21275: extern volatile PIR0bits_t PIR0bits __attribute__((address(0x70C)));
 [v _PIR0bits `VS965 ~T0 @X0 0 e@1804 ]
-[v F12154 `(v ~T0 @X0 0 t? ]
-"35 ./delay.h
-[; ;./delay.h: 35: void delay(long long t, void (*f)());
-[v _delay `(v ~T0 @X0 0 ef2`o`*F12154 ]
-[v F12166 `(v ~T0 @X0 0 t? ]
-[v F12164 `(v ~T0 @X0 0 tf2`o`*F12166 ]
-"1629 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h
+"1629
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 1629: extern volatile unsigned char T0CON0 __attribute__((address(0x01E)));
 [v _T0CON0 `Vuc ~T0 @X0 0 e@30 ]
 "1694
@@ -38,9 +32,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21697
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 21697: extern volatile PIE0bits_t PIE0bits __attribute__((address(0x716)));
 [v _PIE0bits `VS984 ~T0 @X0 0 e@1814 ]
-[v F12170 `(v ~T0 @X0 0 t? ]
-[v F12173 `(v ~T0 @X0 0 t? ]
-[v F12175 `(v ~T0 @X0 0 t? ]
+[v F12162 `(v ~T0 @X0 0 tf ]
+[v F12165 `(v ~T0 @X0 0 tf ]
+[v F12166 `(v ~T0 @X0 0 tf ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1677,14 +1671,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 36301: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
 "12 delay.c
-[; ;delay.c: 12: unsigned int delay_time = 0;
-[v _delay_time `ui ~T0 @X0 1 e ]
+[; ;delay.c: 12: long long delay_time = 0;
+[v _delay_time `o ~T0 @X0 1 e ]
 [i _delay_time
--> -> 0 `i `ui
+-> -> 0 `i `o
 ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
 "14
-[; ;delay.c: 14: void __attribute__((picinterrupt(("")))) isr() {
+[; ;delay.c: 14: void __attribute__((picinterrupt(("")))) isr(void) {
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
@@ -1696,12 +1690,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;delay.c: 16:     PIR0bits.TMR0IF = 0;
 [e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
 "17
-[; ;delay.c: 17:     if(delay != 0) {
-[e $ ! != &U _delay -> -> 0 `i `*F12164 1614  ]
+[; ;delay.c: 17:     if(delay_time != 0) {
+[e $ ! != _delay_time -> -> 0 `i `o 1614  ]
 {
 "18
 [; ;delay.c: 18:         delay_time--;
-[e -- _delay_time -> -> 1 `i `ui ]
+[e -- _delay_time -> -> 1 `i `o ]
 "19
 [; ;delay.c: 19:     }
 }
@@ -1720,8 +1714,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;delay.c: 23:     T0CON0 = 0b10000000;
 [e = _T0CON0 -> -> 128 `i `uc ]
 "24
-[; ;delay.c: 24:     T0CON1 = 0b01001010;
-[e = _T0CON1 -> -> 74 `i `uc ]
+[; ;delay.c: 24:     T0CON1 = 0b01000101;
+[e = _T0CON1 -> -> 69 `i `uc ]
 "25
 [; ;delay.c: 25:     PIE0bits.TMR0IE = 1;
 [e = . . _PIE0bits 0 3 -> -> 1 `i `uc ]
@@ -1730,51 +1724,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 1615 ]
 }
 "28
-[; ;delay.c: 28: void delay(long long t, void (*f)()) {
-[v _delay `(v ~T0 @X0 1 ef2`o`*F12170 ]
+[; ;delay.c: 28: void delay(long long t, void (*f)(void)) {
+[v _delay `(v ~T0 @X0 1 ef2`o`*F12162 ]
 {
 [e :U _delay ]
 [v _t `o ~T0 @X0 1 r1 ]
-[v _f `*F12173 ~T0 @X0 1 r2 ]
+[v _f `*F12165 ~T0 @X0 1 r2 ]
 [f ]
 "29
-[; ;delay.c: 29:     int total = 0;
-[v _total `i ~T0 @X0 1 a ]
-[e = _total -> 0 `i ]
-"30
-[; ;delay.c: 30:     TMR0L = 0;
+[; ;delay.c: 29:     TMR0L = 0;
 [e = _TMR0L -> -> 0 `i `uc ]
-"31
-[; ;delay.c: 31:     PIR0bits.TMR0IF=0;
+"30
+[; ;delay.c: 30:     PIR0bits.TMR0IF=0;
 [e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
-"33
-[; ;delay.c: 33:     delay_time = t*10;
-[e = _delay_time -> * _t -> -> 10 `i `o `ui ]
-"35
-[; ;delay.c: 35:     while(delay_time != 0) {
+"32
+[; ;delay.c: 32:     delay_time = t;
+[e = _delay_time _t ]
+"34
+[; ;delay.c: 34:     while(delay_time != 0) {
 [e $U 1617  ]
 [e :U 1618 ]
 {
-"36
-[; ;delay.c: 36:         if(f != ((void*)0)) {
-[e $ ! != _f -> -> -> 0 `i `*v `*F12175 1620  ]
+"35
+[; ;delay.c: 35:         if(f != ((void*)0)) {
+[e $ ! != _f -> -> -> 0 `i `*v `*F12166 1620  ]
 {
-"37
-[; ;delay.c: 37:             f();
+"36
+[; ;delay.c: 36:             (*f)();
 [e ( *U _f ..  ]
-"38
-[; ;delay.c: 38:         }
+"37
+[; ;delay.c: 37:         }
 }
 [e :U 1620 ]
-"39
-[; ;delay.c: 39:     }
+"38
+[; ;delay.c: 38:     }
 }
 [e :U 1617 ]
-"35
-[; ;delay.c: 35:     while(delay_time != 0) {
-[e $ != _delay_time -> -> 0 `i `ui 1618  ]
+"34
+[; ;delay.c: 34:     while(delay_time != 0) {
+[e $ != _delay_time -> -> 0 `i `o 1618  ]
 [e :U 1619 ]
-"40
-[; ;delay.c: 40: }
+"39
+[; ;delay.c: 39: }
 [e :UE 1616 ]
 }

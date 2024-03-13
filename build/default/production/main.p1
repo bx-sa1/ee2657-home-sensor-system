@@ -1,6 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"364 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h
+"739 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 739: extern volatile unsigned char TRISB __attribute__((address(0x012)));
+[v _TRISB `Vuc ~T0 @X0 0 e@18 ]
+"677
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 677: extern volatile unsigned char TRISA __attribute__((address(0x011)));
+[v _TRISA `Vuc ~T0 @X0 0 e@17 ]
+"364
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 364:     struct {
 [s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S31 . INTEDG . PEIE GIE ]
@@ -17,26 +23,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35 ./lcd.h
 [; ;./lcd.h: 35: void lcd_init();
 [v _lcd_init `(v ~T0 @X0 0 e? ]
-"34 ./tempandhum.h
-[; ;./tempandhum.h: 34: void adc_init();
-[v _adc_init `(v ~T0 @X0 0 e? ]
+"957 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 957: extern volatile unsigned char LATA __attribute__((address(0x016)));
+[v _LATA `Vuc ~T0 @X0 0 e@22 ]
+[v F12154 `(v ~T0 @X0 0 t? ]
+"35 ./delay.h
+[; ;./delay.h: 35: void delay(long long t, void (*f)());
+[v _delay `(v ~T0 @X0 0 ef2`o`*F12154 ]
+[v F12176 `(v ~T0 @X0 0 t? ]
+[v F12177 `(v ~T0 @X0 0 t? ]
 "38 ./lcd.h
 [; ;./lcd.h: 38: void lcd_display_cursor(unsigned char line, unsigned char position);
 [v _lcd_display_cursor `(v ~T0 @X0 0 ef2`uc`uc ]
 "37
 [; ;./lcd.h: 37: void lcd_display_message(const unsigned char * msg);
 [v _lcd_display_message `(v ~T0 @X0 0 ef1`*Cuc ]
-"35 ./tempandhum.h
-[; ;./tempandhum.h: 35: unsigned int read_temperature();
-[v _read_temperature `(ui ~T0 @X0 0 e? ]
-"34 ./utils.h
-[; ;./utils.h: 34: int itoa(long long value, unsigned char *str);
-[v _itoa `(i ~T0 @X0 0 ef2`o`*uc ]
-[v F12154 `(v ~T0 @X0 0 t? ]
-"35 ./delay.h
-[; ;./delay.h: 35: void delay(long long t, void (*f)());
-[v _delay `(v ~T0 @X0 0 ef2`o`*F12154 ]
 [v F12178 `(v ~T0 @X0 0 t? ]
+"13 main.c
+[p x FEXTOSC  =  ECH     ]
+"14
+[p x RSTOSC  =  HFINT32  ]
+"15
+[p x CLKOUTEN  =  OFF    ]
+"16
+[p x CSWEN  =  ON        ]
+"17
+[p x FCMEN  =  ON        ]
+"20
+[p x MCLRE  =  ON        ]
+"21
+[p x PWRTE  =  OFF       ]
+"22
+[p x LPBOREN  =  OFF     ]
+"23
+[p x BOREN  =  ON        ]
+"24
+[p x BORV  =  LO         ]
+"25
+[p x ZCD  =  OFF         ]
+"26
+[p x PPS1WAY  =  ON      ]
+"27
+[p x STVREN  =  ON       ]
+"30
+[p x WDTCPS  =  WDTCPS_31 ]
+"31
+[p x WDTE  =  OFF        ]
+"32
+[p x WDTCWS  =  WDTCWS_7 ]
+"33
+[p x WDTCCS  =  SC       ]
+"36
+[p x WRT  =  OFF         ]
+"37
+[p x SCANE  =  available ]
+"38
+[p x LVP  =  ON          ]
+"41
+[p x CP  =  OFF          ]
+"42
+[p x CPD  =  OFF         ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1672,73 +1718,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36301
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h: 36301: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"15 main.c
-[; ;main.c: 15: void read_sensors() {
+"53 main.c
+[; ;main.c: 53: void read_sensors() {
 [v _read_sensors `(v ~T0 @X0 1 ef ]
 {
 [e :U _read_sensors ]
 [f ]
-"17
-[; ;main.c: 17: }
+"55
+[; ;main.c: 55: }
 [e :UE 1613 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"19
-[; ;main.c: 19: void main(void) {
+"57
+[; ;main.c: 57: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"20
-[; ;main.c: 20:     INTCONbits.GIE = 1;
+"58
+[; ;main.c: 58:     TRISB = 0x00;
+[e = _TRISB -> -> 0 `i `uc ]
+"59
+[; ;main.c: 59:     TRISA = 0x00;
+[e = _TRISA -> -> 0 `i `uc ]
+"60
+[; ;main.c: 60:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"21
-[; ;main.c: 21:     delay_init();
+"61
+[; ;main.c: 61:     delay_init();
 [e ( _delay_init ..  ]
-"22
-[; ;main.c: 22:     lcd_init();
+"62
+[; ;main.c: 62:     lcd_init();
 [e ( _lcd_init ..  ]
-"23
-[; ;main.c: 23:     adc_init();
-[e ( _adc_init ..  ]
-"25
-[; ;main.c: 25:     for(;;) {
+"64
+[; ;main.c: 64:     for(;;) {
 {
 [e :U 1615 ]
 {
-"26
-[; ;main.c: 26:         lcd_display_cursor(0,0);
+"65
+[; ;main.c: 65:         LATA = 0xff;
+[e = _LATA -> -> 255 `i `uc ]
+"66
+[; ;main.c: 66:         delay(1000, ((void*)0));
+[e ( _delay (2 , -> -> 1000 `i `o -> -> -> 0 `i `*v `*F12176 ]
+"67
+[; ;main.c: 67:         LATA = 0;
+[e = _LATA -> -> 0 `i `uc ]
+"68
+[; ;main.c: 68:         delay(1000, ((void*)0));
+[e ( _delay (2 , -> -> 1000 `i `o -> -> -> 0 `i `*v `*F12177 ]
+"70
+[; ;main.c: 70:         lcd_display_cursor(0,0);
 [e ( _lcd_display_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"27
-[; ;main.c: 27:         lcd_display_message("Hello, World!");
+"71
+[; ;main.c: 71:         lcd_display_message("Hello, World!");
 [e ( _lcd_display_message (1 :s 1C ]
-"29
-[; ;main.c: 29:         unsigned int temp = read_temperature();
-[v _temp `ui ~T0 @X0 1 a ]
-[e = _temp ( _read_temperature ..  ]
-"30
-[; ;main.c: 30:         char temp_string[16];
-[v _temp_string `uc ~T0 @X0 -> 16 `i a ]
-"31
-[; ;main.c: 31:         itoa(temp, temp_string);
-[e ( _itoa (2 , -> _temp `o -> &U _temp_string `*uc ]
-"32
-[; ;main.c: 32:         lcd_display_cursor(1,0);
-[e ( _lcd_display_cursor (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-"33
-[; ;main.c: 33:         lcd_display_message(temp_string);
-[e ( _lcd_display_message (1 -> &U _temp_string `*Cuc ]
-"35
-[; ;main.c: 35:         delay(5000, ((void*)0));
+"73
+[; ;main.c: 73:         delay(5000, ((void*)0));
 [e ( _delay (2 , -> -> 5000 `i `o -> -> -> 0 `i `*v `*F12178 ]
-"36
-[; ;main.c: 36:     }
+"74
+[; ;main.c: 74:     }
 }
 [e $U 1615  ]
 [e :U 1616 ]
 }
-"37
-[; ;main.c: 37: }
+"75
+[; ;main.c: 75: }
 [e :UE 1614 ]
 }
 [a 1C 72 101 108 108 111 44 32 87 111 114 108 100 33 0 ]

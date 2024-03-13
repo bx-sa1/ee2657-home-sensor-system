@@ -25,32 +25,32 @@
 [v _delay_init delay_init `(v  1 e 1 0 ]
 "28
 [v _delay delay `(v  1 e 1 0 ]
-"13 H:\group-proj\group-proj.X\lcd.c
+"12 H:\group-proj\group-proj.X\lcd.c
 [v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
-"24
+"23
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
-"45
+"41
 [v _lcd_char lcd_char `(v  1 e 1 0 ]
-"55
+"51
 [v _lcd_display_message lcd_display_message `(v  1 e 1 0 ]
-"65
+"61
 [v _lcd_display_cursor lcd_display_cursor `(v  1 e 1 0 ]
-"19 H:\group-proj\group-proj.X\main.c
+"57 H:\group-proj\group-proj.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"13 H:\group-proj\group-proj.X\tempandhum.c
-[v _adc_init adc_init `(v  1 e 1 0 ]
-"18
-[v _read_temperature read_temperature `(ui  1 e 2 0 ]
-"12 H:\group-proj\group-proj.X\utils.c
-[v _itoa itoa `(i  1 e 2 0 ]
-[s S53 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S54 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "371 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18877.h
-[u S58 . 1 `S53 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES58  1 e 1 @11 ]
+[u S59 . 1 `S54 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES59  1 e 1 @11 ]
+"677
+[v _TRISA TRISA `VEuc  1 e 1 @17 ]
+"739
+[v _TRISB TRISB `VEuc  1 e 1 @18 ]
+"957
+[v _LATA LATA `VEuc  1 e 1 @22 ]
 "1019
 [v _LATB LATB `VEuc  1 e 1 @23 ]
 "1237
@@ -65,7 +65,7 @@
 [v _ADRESH ADRESH `VEuc  1 e 1 @141 ]
 "2133
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @147 ]
-[s S171 . 1 `uc 1 ADGO 1 0 :1:0 
+[s S148 . 1 `uc 1 ADGO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM 1 0 :2:2 
 `uc 1 ADCS 1 0 :1:4 
@@ -74,186 +74,104 @@
 `uc 1 ADON 1 0 :1:7 
 ]
 "2167
-[s S179 . 1 `uc 1 DONE 1 0 :1:0 
+[s S156 . 1 `uc 1 DONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFRM 1 0 :2:2 
 ]
-[s S183 . 1 `uc 1 nDONE 1 0 :1:0 
+[s S160 . 1 `uc 1 nDONE 1 0 :1:0 
 ]
-[s S185 . 1 `uc 1 GO 1 0 :1:0 
+[s S162 . 1 `uc 1 GO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM0 1 0 :1:2 
 ]
-[s S189 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+[s S166 . 1 `uc 1 GO_nDONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFRM0 1 0 :1:2 
 ]
-[u S193 . 1 `S171 1 . 1 0 `S179 1 . 1 0 `S183 1 . 1 0 `S185 1 . 1 0 `S189 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES193  1 e 1 @147 ]
+[u S170 . 1 `S148 1 . 1 0 `S156 1 . 1 0 `S160 1 . 1 0 `S162 1 . 1 0 `S166 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES170  1 e 1 @147 ]
 "2832
 [v _ADPCH ADPCH `VEuc  1 e 1 @158 ]
-[s S107 . 1 `uc 1 INTF 1 0 :1:0 
+[s S95 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "21275
-[u S112 . 1 `S107 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES112  1 e 1 @1804 ]
-[s S126 . 1 `uc 1 INTE 1 0 :1:0 
+[u S100 . 1 `S95 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES100  1 e 1 @1804 ]
+[s S110 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "21697
-[u S131 . 1 `S126 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES131  1 e 1 @1814 ]
+[u S115 . 1 `S110 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES115  1 e 1 @1814 ]
 "33494
 [v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
 "12 H:\group-proj\group-proj.X\delay.c
-[v _delay_time delay_time `ui  1 e 2 0 ]
-"19 H:\group-proj\group-proj.X\main.c
+[v _delay_time delay_time `o  1 e 8 0 ]
+"57 H:\group-proj\group-proj.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"30
-[v main@temp_string temp_string `[16]uc  1 a 16 56 ]
-"29
-[v main@temp temp `ui  1 a 2 72 ]
-"37
+"75
 } 0
-"18 H:\group-proj\group-proj.X\tempandhum.c
-[v _read_temperature read_temperature `(ui  1 e 2 0 ]
-{
-"23
-[v read_temperature@kelvin kelvin `ui  1 a 2 4 ]
-"22
-[v read_temperature@temp temp `ui  1 a 2 2 ]
-"25
-} 0
-"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"10
-[v ___lwdiv@quotient quotient `ui  1 a 2 11 ]
-"11
-[v ___lwdiv@counter counter `uc  1 a 1 13 ]
-"5
-[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
-[v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
-"30
-} 0
-"24 H:\group-proj\group-proj.X\lcd.c
+"23 H:\group-proj\group-proj.X\lcd.c
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
 {
-"43
+"39
 } 0
-"55
+"51
 [v _lcd_display_message lcd_display_message `(v  1 e 1 0 ]
 {
-"57
-[v lcd_display_message@i i `ui  1 a 2 11 ]
-"55
-[v lcd_display_message@mess mess `*.26DCuc  1 p 2 8 ]
-"63
+"53
+[v lcd_display_message@i i `ui  1 a 2 1 ]
+"51
+[v lcd_display_message@mess mess `*.25DCuc  1 p 2 12 ]
+"59
 } 0
-"45
+"41
 [v _lcd_char lcd_char `(v  1 e 1 0 ]
 {
 [v lcd_char@c c `uc  1 a 1 wreg ]
 [v lcd_char@c c `uc  1 a 1 wreg ]
-"47
-[v lcd_char@c c `uc  1 a 1 7 ]
-"53
+"43
+[v lcd_char@c c `uc  1 a 1 11 ]
+"49
 } 0
-"65
+"61
 [v _lcd_display_cursor lcd_display_cursor `(v  1 e 1 0 ]
 {
 [v lcd_display_cursor@line line `uc  1 a 1 wreg ]
 [v lcd_display_cursor@line line `uc  1 a 1 wreg ]
-[v lcd_display_cursor@position position `uc  1 p 1 8 ]
-"67
-[v lcd_display_cursor@line line `uc  1 a 1 9 ]
-"78
+[v lcd_display_cursor@position position `uc  1 p 1 12 ]
+"63
+[v lcd_display_cursor@line line `uc  1 a 1 13 ]
+"74
 } 0
-"13
+"12
 [v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
 {
 [v lcd_cmd@cmd cmd `uc  1 a 1 wreg ]
 [v lcd_cmd@cmd cmd `uc  1 a 1 wreg ]
-"15
-[v lcd_cmd@cmd cmd `uc  1 a 1 7 ]
-"21
+"14
+[v lcd_cmd@cmd cmd `uc  1 a 1 11 ]
+"20
 } 0
 "28 H:\group-proj\group-proj.X\delay.c
 [v _delay delay `(v  1 e 1 0 ]
 {
 [v delay@t t `o  1 p 8 0 ]
 [v delay@f f `*.37(v  1 p 2 8 ]
-"40
+"39
 } 0
-"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 4 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
-"53
-} 0
-"12 H:\group-proj\group-proj.X\utils.c
-[v _itoa itoa `(i  1 e 2 0 ]
-{
-"14
-[v itoa@tmp tmp `[16]uc  1 a 16 25 ]
-"18
-[v itoa@v v `o  1 a 8 45 ]
-"26
-[v itoa@len len `i  1 a 2 43 ]
-"17
-[v itoa@r r `i  1 a 2 41 ]
-"15
-[v itoa@tp tp `*.4uc  1 a 1 53 ]
-"12
-[v itoa@value value `o  1 p 8 16 ]
-[v itoa@str str `*.4uc  1 p 1 24 ]
-"35
-} 0
-"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-[v ___aomod __aomod `(o  1 e 8 0 ]
-{
-"12
-[v ___aomod@sign sign `uc  1 a 1 2 ]
-[v ___aomod@counter counter `uc  1 a 1 1 ]
-"7
-[v ___aomod@divisor divisor `o  1 p 8 0 ]
-[v ___aomod@dividend dividend `o  1 p 8 8 ]
-"36
-} 0
-"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-[v ___aodiv __aodiv `(o  1 e 8 0 ]
-{
-"12
-[v ___aodiv@quotient quotient `o  1 a 8 3 ]
-"13
-[v ___aodiv@sign sign `uc  1 a 1 2 ]
-[v ___aodiv@counter counter `uc  1 a 1 1 ]
-"7
-[v ___aodiv@divisor divisor `o  1 p 8 0 ]
-[v ___aodiv@dividend dividend `o  1 p 8 8 ]
-"43
-} 0
-"22 H:\group-proj\group-proj.X\delay.c
+"22
 [v _delay_init delay_init `(v  1 e 1 0 ]
 {
 "26
 } 0
-"13 H:\group-proj\group-proj.X\tempandhum.c
-[v _adc_init adc_init `(v  1 e 1 0 ]
-{
-"16
-} 0
-"14 H:\group-proj\group-proj.X\delay.c
+"14
 [v _isr isr `II(v  1 e 1 0 ]
 {
 "20

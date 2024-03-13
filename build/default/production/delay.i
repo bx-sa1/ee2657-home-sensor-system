@@ -20738,32 +20738,31 @@ void delay(long long t, void (*f)());
 # 10 "delay.c" 2
 
 
-unsigned int delay_time = 0;
+long long delay_time = 0;
 
-void __attribute__((picinterrupt(("")))) isr() {
+void __attribute__((picinterrupt(("")))) isr(void) {
     TMR0L = 156;
     PIR0bits.TMR0IF = 0;
-    if(delay != 0) {
+    if(delay_time != 0) {
         delay_time--;
     }
 }
 
 void delay_init() {
     T0CON0 = 0b10000000;
-    T0CON1 = 0b01001010;
+    T0CON1 = 0b01000101;
     PIE0bits.TMR0IE = 1;
 }
 
-void delay(long long t, void (*f)()) {
-    int total = 0;
+void delay(long long t, void (*f)(void)) {
     TMR0L = 0;
     PIR0bits.TMR0IF=0;
 
-    delay_time = t*10;
+    delay_time = t;
 
     while(delay_time != 0) {
         if(f != ((void*)0)) {
-            f();
+            (*f)();
         }
     }
 }

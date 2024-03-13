@@ -14,7 +14,6 @@
 
 
 
-
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -20729,7 +20728,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\xc.h" 2 3
-# 9 "lcd.c" 2
+# 8 "lcd.c" 2
 
 # 1 "./lcd.h" 1
 # 34 "./lcd.h"
@@ -20738,13 +20737,13 @@ void lcd_init();
 void lcd_char(unsigned char c);
 void lcd_display_message(const unsigned char * msg);
 void lcd_display_cursor(unsigned char line, unsigned char position);
-# 10 "lcd.c" 2
+# 9 "lcd.c" 2
 
 # 1 "./delay.h" 1
 # 34 "./delay.h"
 void delay_init();
 void delay(long long t, void (*f)());
-# 11 "lcd.c" 2
+# 10 "lcd.c" 2
 
 
 void lcd_cmd(unsigned char cmd)
@@ -20759,24 +20758,21 @@ void lcd_cmd(unsigned char cmd)
 
 
 void lcd_init() {
-    delay(60, ((void*)0));
+    delay(600, ((void*)0));
     LATB = 0x23;
     LATB = 0x03;
-    delay(20, ((void*)0));
-    LATB = 0x23;
-    LATB = 0x03;
-    delay(5, ((void*)0));
-    LATB = 0x23;
-    LATB = 0x03;
-    delay(5, ((void*)0));
-    LATB = 0x23;
-    LATB = 0x03;
-    delay(5, ((void*)0));
+    delay(200, ((void*)0));
+    LATB = 0x22;
+    LATB = 0x02;
+    delay(50, ((void*)0));
+    LATB = 0x22;
+    LATB = 0x02;
+    delay(50, ((void*)0));
 
     lcd_cmd(0x28);
-    lcd_cmd(0x0c);
+    lcd_cmd(0x0f);
+    lcd_cmd(0x01);
     lcd_cmd(0x06);
-    lcd_cmd(1);
 }
 
 void lcd_char(unsigned char c)

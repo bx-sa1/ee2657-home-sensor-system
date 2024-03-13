@@ -7,9 +7,37 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
+# 13 "main.c"
+#pragma config FEXTOSC = ECH
+#pragma config RSTOSC = HFINT32
+#pragma config CLKOUTEN = OFF
+#pragma config CSWEN = ON
+#pragma config FCMEN = ON
 
 
+#pragma config MCLRE = ON
+#pragma config PWRTE = OFF
+#pragma config LPBOREN = OFF
+#pragma config BOREN = ON
+#pragma config BORV = LO
+#pragma config ZCD = OFF
+#pragma config PPS1WAY = ON
+#pragma config STVREN = ON
 
+
+#pragma config WDTCPS = WDTCPS_31
+#pragma config WDTE = OFF
+#pragma config WDTCWS = WDTCWS_7
+#pragma config WDTCCS = SC
+
+
+#pragma config WRT = OFF
+#pragma config SCANE = available
+#pragma config LVP = ON
+
+
+#pragma config CP = OFF
+#pragma config CPD = OFF
 
 
 
@@ -20729,13 +20757,13 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\xc.h" 2 3
-# 9 "main.c" 2
+# 47 "main.c" 2
 
 # 1 "./delay.h" 1
 # 34 "./delay.h"
 void delay_init();
 void delay(long long t, void (*f)());
-# 10 "main.c" 2
+# 48 "main.c" 2
 
 # 1 "./lcd.h" 1
 # 34 "./lcd.h"
@@ -20744,19 +20772,19 @@ void lcd_init();
 void lcd_char(unsigned char c);
 void lcd_display_message(const unsigned char * msg);
 void lcd_display_cursor(unsigned char line, unsigned char position);
-# 11 "main.c" 2
+# 49 "main.c" 2
 
 # 1 "./tempandhum.h" 1
 # 34 "./tempandhum.h"
 void adc_init();
 unsigned int read_temperature();
 unsigned int read_humidity();
-# 12 "main.c" 2
+# 50 "main.c" 2
 
 # 1 "./utils.h" 1
 # 34 "./utils.h"
 int itoa(long long value, unsigned char *str);
-# 13 "main.c" 2
+# 51 "main.c" 2
 
 
 void read_sensors() {
@@ -20764,20 +20792,20 @@ void read_sensors() {
 }
 
 void main(void) {
+    TRISB = 0x00;
+    TRISA = 0x00;
     INTCONbits.GIE = 1;
     delay_init();
     lcd_init();
-    adc_init();
 
     for(;;) {
+        LATA = 0xff;
+        delay(1000, ((void*)0));
+        LATA = 0;
+        delay(1000, ((void*)0));
+
         lcd_display_cursor(0,0);
         lcd_display_message("Hello, World!");
-
-        unsigned int temp = read_temperature();
-        char temp_string[16];
-        itoa(temp, temp_string);
-        lcd_display_cursor(1,0);
-        lcd_display_message(temp_string);
 
         delay(5000, ((void*)0));
     }

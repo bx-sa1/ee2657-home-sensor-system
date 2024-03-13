@@ -5,7 +5,6 @@
  * Created on 28 February 2024, 13:39
  */
 
-
 #include <xc.h>
 #include "lcd.h"
 #include "delay.h"
@@ -22,24 +21,21 @@ void lcd_cmd(unsigned char cmd)
 
 
 void lcd_init() {
-    delay(60, NULL);
+    delay(600, NULL);
     LATB = 0x23;
     LATB = 0x03;
-    delay(20, NULL);
-    LATB = 0x23;
-    LATB = 0x03;
-    delay(5, NULL);
-    LATB = 0x23;
-    LATB = 0x03;
-    delay(5, NULL);
-    LATB = 0x23;
-    LATB = 0x03;
-    delay(5, NULL);
+    delay(200, NULL);
+    LATB = 0x22;
+    LATB = 0x02;
+    delay(50, NULL);
+    LATB = 0x22;
+    LATB = 0x02;
+    delay(50, NULL);
     
-    lcd_cmd(0x28);        // set 2 lines, 4 bit interface, 5x7 or 5x8 dots
-    lcd_cmd(0x0c);        // set display on, no cursor displayed
-    lcd_cmd(0x06);        // set cursor to move right after each character
-    lcd_cmd(1);              // clear the display 
+    lcd_cmd(0x28);
+    lcd_cmd(0x0f);
+    lcd_cmd(0x01);
+    lcd_cmd(0x06);
 }
 
 void lcd_char(unsigned char c)
