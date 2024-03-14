@@ -31,9 +31,9 @@
 #ifndef TEMP_AND_HUM_H
 #define	TEMP_AND_HUM_H
 
-void adc_init();
-unsigned int read_temperature();
-unsigned int read_humidity();
+void sensors_init();
+void sensors_read_temperature(uint8_t *celsius_q, uint8_t *celsius_r);
+void sensors_read_humidity(uint8_t *humidity_q, uint8_t *humidity_r);
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

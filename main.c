@@ -47,29 +47,117 @@
 #include <xc.h>
 #include "delay.h"
 #include "lcd.h"
-#include "tempandhum.h"
+#include "sensors.h"
 #include "utils.h"
+#include "keypad.h"
 
-void read_sensors() {
+int read_pin() {
+    const char *actual_pin = "123456";
+    char pin[7];
+    char *pin_p = pin;
+    uint8_t pin_val[6];
+    uint8_t *pin_val_p = pin_val;
+    uint8_t count = 0;
     
+    while(count < 6) {
+        keypad_scan();
+        if(keypad_read(pin_val_p+count, pin_p+count)) {
+            count++;
+            lcd_char('*');
+        }
+        delay(100, NULL);
+    }
+    pin_p[6] = '\0';
+    
+    for(int i = 0; i < 7; i++){
+        if(pin[i] != actual_pin[i]) {
+            return 0;
+        }
+    }
+    
+    return 1;
 }
+
+enum State {
+    LOGIN,
+    HUMIDITY,
+    TEMPERATURE,
+    
+};
 
 void main(void) {
     TRISB = 0x00;
-    TRISA = 0x00;
+    TRISA = 0b00000111;
+    ANSELA = 0x00;
     INTCONbits.GIE = 1;
     delay_init();
     lcd_init();
+    sensors_init();
+    
+    enum State state = LOGIN;
     
     for(;;) {
-        LATA = 0xff;
-        delay(1000, NULL);
-        LATA = 0;
-        delay(1000, NULL);
+        switch(state) {
+            case LOGIN:
+                lcd_display_cursor(0,0);
+                lcd_display_message("Welcome!");
+                lcd_display_cursor(1,0);
+                lcd_display_message("Enter PIN:");
+                if(!read_pin()) {
+                    lcd_clear();
+                    lcd_display_cursor(0,0);
+                    lcd_display_message("PIN is incorrect");
+                    delay(5000, NULL);
+                    lcd_clear();
+                } else {
+                    state = HUMIDITY;
+                    lcd_clear();
+                }
+                break;
+            case HUMIDITY:
+                lcd_display_cursor(0, 0);
+                lcd_display_message("Humidity: ");
+                
+                uint8_t hq = 0, hr = 0;
+                sensors_read_humidity(&hq, &hr);
+                char hqc[4], hrc[3];
+                itoa(hq, hqc); itoa(hr/1024, hrc);
+                lcd_display_message(hqc);
+                lcd_display_message(".");
+                lcd_display_message(hrc);
+                lcd_display_message("%");
+                break;
+            case TEMPERATURE:
+                lcd_display_cursor(0, 0);
+                lcd_display_message("Temp: ");
+                
+                uint8_t tq = 0, tr = 0;
+                sensors_read_temperature(&tq, &tr);
+                char tqc[4], trc[3];
+                itoa(tq, tqc); itoa(tr/1024, trc);
+                lcd_display_message(tqc);
+                lcd_display_message(".");
+                lcd_display_message(trc);
+                lcd_display_message("C");
+                delay(5000, NULL);
+                break;   
+        }
         
-        lcd_display_cursor(0,0);
-        lcd_display_message("Hello, World!");
-    
-        delay(5000, NULL);
+        if(state != LOGIN) {
+            uint8_t kv, k;
+            keypad_scan();
+            if(keypad_read(&kv, &k)) {
+                switch(kv) {
+                    case 1:
+                        lcd_clear();
+                        state = HUMIDITY;
+                        break;
+                    case 2:
+                        lcd_clear();
+                        state = TEMPERATURE;
+                        break;
+                }
+            }
+        }
     }
 }

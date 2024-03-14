@@ -9,6 +9,11 @@
 #include "lcd.h"
 #include "delay.h"
 
+void lcd_clear() {
+    lcd_cmd(0x01);
+    delay(2, NULL);
+}
+
 void lcd_cmd(unsigned char cmd)
 {
     LATB = 0x20 + ((cmd >> 4) & 0x0f); // enable + MSB of instruction
@@ -22,23 +27,22 @@ void lcd_cmd(unsigned char cmd)
 
 void lcd_init() {
     delay(600, NULL);
-    LATB = 0x23;
+    LATB = 0x23; //0011 1000 //0010 0011
     LATB = 0x03;
     delay(200, NULL);
-    LATB = 0x22;
-    LATB = 0x02;
-    delay(50, NULL);
-    LATB = 0x22;
-    LATB = 0x02;
-    delay(50, NULL);
-    
     lcd_cmd(0x28);
+    delay(50, NULL);
+    lcd_cmd(0x28);
+    delay(50, NULL);
     lcd_cmd(0x0f);
+    delay(50, NULL);
     lcd_cmd(0x01);
+    delay(50, NULL);
     lcd_cmd(0x06);
+    delay(50, NULL);
 }
 
-void lcd_char(unsigned char c)
+void lcd_char(char c)
 {
     LATB = 0x30 + ((c >> 4) & 0x0f); // enable + MSB of char
     LATB = 0x10 + ((c >> 4) & 0x0f); // sent
@@ -48,10 +52,10 @@ void lcd_char(unsigned char c)
     delay(1, NULL);
 }
 
-void lcd_display_message(const unsigned char * mess)
+void lcd_display_message(const char *mess)
 {
     unsigned int i=0;
-    while(mess[i] != 0)
+    while(mess[i] != '\0')
     {
         lcd_char(mess[i]);
         i++;
@@ -65,11 +69,7 @@ void lcd_display_cursor(unsigned char line, unsigned char position)
         position = position + 0x00; 
     } else if(line==1) {
         position = position + 0x40;
-    } else if(line==2) {
-        position = position + 0x14;
-    } else if(line==3) {
-        position = position + 0x54;
-    }
+    } 
     lcd_cmd(0x80+position);
 }
 

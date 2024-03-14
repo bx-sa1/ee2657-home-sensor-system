@@ -31,10 +31,11 @@
 #ifndef LCD_H
 #define LCD_H
 
+void lcd_clear();
 void lcd_cmd(unsigned char cmd);
 void lcd_init();
-void lcd_char(unsigned char c);
-void lcd_display_message(const unsigned char * msg);
+void lcd_char(char c);
+void lcd_display_message(const char * msg);
 void lcd_display_cursor(unsigned char line, unsigned char position);
 
 #endif

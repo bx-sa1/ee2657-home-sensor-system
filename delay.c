@@ -5,7 +5,6 @@
  * Created on 28 February 2024, 13:39
  */
 
-
 #include <xc.h>
 #include "delay.h"
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\group-proj.X.production.hex">
+  <executable name="dist/default/production/ee2657-home-sensor-system.production.hex">
     <memory name="program">
       <units>words</units>
       <length>32768</length>
-      <used>492</used>
-      <free>32276</free>
+      <used>2059</used>
+      <free>30709</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>4096</length>
-      <used>27</used>
-      <free>4069</free>
+      <used>102</used>
+      <free>3994</free>
     </memory>
   </executable>
 </project>

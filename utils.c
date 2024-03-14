@@ -23,6 +23,10 @@ int itoa(long long value, unsigned char *str) //absolute TODO: allow negative nu
         *tp++ = r+'0';
     }
     
+    if(v < 0) {
+        *tp++ = '-';
+    }
+    
     int len = tp - tmp;
     
     while(tp > tmp) {
