@@ -1,0 +1,387 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18877 ]
+[d frameptr 6 ]
+"97 H:\group-proj\group-proj.X\main.c
+[e E12193 State `uc
+LOGIN 0
+HUMIDITY 1
+TEMPERATURE 2
+]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"13 H:\group-proj\group-proj.X\delay.c
+[v _isr isr `II(v  1 e 1 0 ]
+"21
+[v _delay_init delay_init `(v  1 e 1 0 ]
+"27
+[v _delay delay `(v  1 e 1 0 ]
+"20 H:\group-proj\group-proj.X\keypad.c
+[v _keypad_scan keypad_scan `(v  1 e 1 0 ]
+"32
+[v _keypad_read keypad_read `(i  1 e 2 0 ]
+"12 H:\group-proj\group-proj.X\lcd.c
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+"17
+[v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
+"28
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+"45
+[v _lcd_char lcd_char `(v  1 e 1 0 ]
+"55
+[v _lcd_display_message lcd_display_message `(v  1 e 1 0 ]
+"65
+[v _lcd_display_cursor lcd_display_cursor `(v  1 e 1 0 ]
+"54 H:\group-proj\group-proj.X\main.c
+[v _read_pin read_pin `(i  1 e 2 0 ]
+"88
+[v _main main `(v  1 e 1 0 ]
+"19 H:\group-proj\group-proj.X\sesnors.c
+[v _sensors_init sensors_init `(v  1 e 1 0 ]
+"25
+[v _sensors_read_temperature sensors_read_temperature `(v  1 e 1 0 ]
+"34
+[v _sensors_read_humidity sensors_read_humidity `(v  1 e 1 0 ]
+"12 H:\group-proj\group-proj.X\utils.c
+[v _itoa itoa `(i  1 e 2 0 ]
+[s S78 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"371 C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h
+[u S83 . 1 `S78 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES83  1 e 1 @11 ]
+"391
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"677
+[v _TRISA TRISA `VEuc  1 e 1 @17 ]
+"739
+[v _TRISB TRISB `VEuc  1 e 1 @18 ]
+"801
+[v _TRISC TRISC `VEuc  1 e 1 @19 ]
+"957
+[v _LATA LATA `VEuc  1 e 1 @22 ]
+"1019
+[v _LATB LATB `VEuc  1 e 1 @23 ]
+"1237
+[v _TMR0L TMR0L `VEuc  1 e 1 @28 ]
+"1629
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @30 ]
+"1694
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @31 ]
+"1812
+[v _ADRESL ADRESL `VEuc  1 e 1 @140 ]
+"1832
+[v _ADRESH ADRESH `VEuc  1 e 1 @141 ]
+"2133
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @147 ]
+[s S236 . 1 `uc 1 ADGO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM 1 0 :2:2 
+`uc 1 ADCS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADCONT 1 0 :1:6 
+`uc 1 ADON 1 0 :1:7 
+]
+"2167
+[s S244 . 1 `uc 1 DONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFRM 1 0 :2:2 
+]
+[s S248 . 1 `uc 1 nDONE 1 0 :1:0 
+]
+[s S250 . 1 `uc 1 GO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM0 1 0 :1:2 
+]
+[s S254 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFRM0 1 0 :1:2 
+]
+[u S258 . 1 `S236 1 . 1 0 `S244 1 . 1 0 `S248 1 . 1 0 `S250 1 . 1 0 `S254 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES258  1 e 1 @147 ]
+"2832
+[v _ADPCH ADPCH `VEuc  1 e 1 @158 ]
+[s S167 . 1 `uc 1 INTF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"21275
+[u S172 . 1 `S167 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES172  1 e 1 @1804 ]
+[s S182 . 1 `uc 1 INTE 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+"21697
+[u S187 . 1 `S182 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES187  1 e 1 @1814 ]
+"33494
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+"34734
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+"11 H:\group-proj\group-proj.X\delay.c
+[v _delay_time delay_time `o  1 e 8 0 ]
+"88 H:\group-proj\group-proj.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"142
+[v main@kv kv `uc  1 a 1 73 ]
+[v main@k k `uc  1 a 1 72 ]
+"136
+[v main@tqc tqc `[4]uc  1 a 4 60 ]
+"123
+[v main@hqc hqc `[4]uc  1 a 4 56 ]
+"124
+[v main@hrc hrc `[3]uc  1 a 3 64 ]
+"134
+[v main@tq tq `uc  1 a 1 70 ]
+"121
+[v main@hr hr `uc  1 a 1 69 ]
+[v main@hq hq `uc  1 a 1 68 ]
+"134
+[v main@tr tr `uc  1 a 1 67 ]
+"97
+[v main@state state `E12193  1 a 1 71 ]
+"158
+} 0
+"25 H:\group-proj\group-proj.X\sesnors.c
+[v _sensors_read_temperature sensors_read_temperature `(v  1 e 1 0 ]
+{
+[v sensors_read_temperature@celsius_q celsius_q `*.4uc  1 a 1 wreg ]
+"29
+[v sensors_read_temperature@temp temp `us  1 a 2 2 ]
+"25
+[v sensors_read_temperature@celsius_q celsius_q `*.4uc  1 a 1 wreg ]
+[v sensors_read_temperature@celsius_r celsius_r `*.4uc  1 p 1 0 ]
+[v sensors_read_temperature@celsius_q celsius_q `*.4uc  1 a 1 1 ]
+"32
+} 0
+"34
+[v _sensors_read_humidity sensors_read_humidity `(v  1 e 1 0 ]
+{
+[v sensors_read_humidity@humidity_q humidity_q `*.4uc  1 a 1 wreg ]
+"38
+[v sensors_read_humidity@humidity humidity `us  1 a 2 17 ]
+"34
+[v sensors_read_humidity@humidity_q humidity_q `*.4uc  1 a 1 wreg ]
+[v sensors_read_humidity@humidity_r humidity_r `*.4uc  1 p 1 13 ]
+[v sensors_read_humidity@humidity_q humidity_q `*.4uc  1 a 1 16 ]
+"41
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 11 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
+"30
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 11 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 10 ]
+[v ___awdiv@counter counter `uc  1 a 1 9 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 4 ]
+[v ___awdiv@dividend dividend `i  1 p 2 6 ]
+"41
+} 0
+"19 H:\group-proj\group-proj.X\sesnors.c
+[v _sensors_init sensors_init `(v  1 e 1 0 ]
+{
+"23
+} 0
+"54 H:\group-proj\group-proj.X\main.c
+[v _read_pin read_pin `(i  1 e 2 0 ]
+{
+"72
+[v read_pin@i i `i  1 a 2 19 ]
+"56
+[v read_pin@pin pin `[7]uc  1 a 7 7 ]
+"58
+[v read_pin@pin_val pin_val `[6]uc  1 a 6 1 ]
+"55
+[v read_pin@actual_pin actual_pin `*.25DCuc  1 a 2 14 ]
+"60
+[v read_pin@count count `uc  1 a 1 18 ]
+"57
+[v read_pin@pin_p pin_p `*.4uc  1 a 1 17 ]
+"59
+[v read_pin@pin_val_p pin_val_p `*.4uc  1 a 1 16 ]
+"79
+} 0
+"20 H:\group-proj\group-proj.X\keypad.c
+[v _keypad_scan keypad_scan `(v  1 e 1 0 ]
+{
+"21
+[v keypad_scan@key_scan key_scan `uc  1 s 1 key_scan ]
+"30
+} 0
+"32
+[v _keypad_read keypad_read `(i  1 e 2 0 ]
+{
+[v keypad_read@value value `*.4uc  1 a 1 wreg ]
+[v keypad_read@value value `*.4uc  1 a 1 wreg ]
+[v keypad_read@char_value char_value `*.4uc  1 p 1 0 ]
+[v keypad_read@value value `*.4uc  1 a 1 4 ]
+"91
+} 0
+"28 H:\group-proj\group-proj.X\lcd.c
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+{
+"43
+} 0
+"55
+[v _lcd_display_message lcd_display_message `(v  1 e 1 0 ]
+{
+"57
+[v lcd_display_message@i i `ui  1 a 2 1 ]
+"55
+[v lcd_display_message@mess mess `*.26DCuc  1 p 2 12 ]
+"63
+} 0
+"45
+[v _lcd_char lcd_char `(v  1 e 1 0 ]
+{
+[v lcd_char@c c `uc  1 a 1 wreg ]
+[v lcd_char@c c `uc  1 a 1 wreg ]
+"47
+[v lcd_char@c c `uc  1 a 1 11 ]
+"53
+} 0
+"65
+[v _lcd_display_cursor lcd_display_cursor `(v  1 e 1 0 ]
+{
+[v lcd_display_cursor@line line `uc  1 a 1 wreg ]
+[v lcd_display_cursor@line line `uc  1 a 1 wreg ]
+[v lcd_display_cursor@position position `uc  1 p 1 12 ]
+"67
+[v lcd_display_cursor@line line `uc  1 a 1 13 ]
+"74
+} 0
+"12
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+{
+"15
+} 0
+"17
+[v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
+{
+[v lcd_cmd@cmd cmd `uc  1 a 1 wreg ]
+[v lcd_cmd@cmd cmd `uc  1 a 1 wreg ]
+"19
+[v lcd_cmd@cmd cmd `uc  1 a 1 11 ]
+"25
+} 0
+"27 H:\group-proj\group-proj.X\delay.c
+[v _delay delay `(v  1 e 1 0 ]
+{
+[v delay@t t `o  1 p 8 0 ]
+[v delay@f f `*.37(v  1 p 2 8 ]
+"38
+} 0
+"12 H:\group-proj\group-proj.X\utils.c
+[v _itoa itoa `(i  1 e 2 0 ]
+{
+"14
+[v itoa@tmp tmp `[16]uc  1 a 16 25 ]
+"18
+[v itoa@v v `o  1 a 8 45 ]
+"30
+[v itoa@len len `i  1 a 2 43 ]
+"17
+[v itoa@r r `i  1 a 2 41 ]
+"15
+[v itoa@tp tp `*.4uc  1 a 1 53 ]
+"12
+[v itoa@value value `o  1 p 8 16 ]
+[v itoa@str str `*.4uc  1 p 1 24 ]
+"39
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+{
+"12
+[v ___aomod@sign sign `uc  1 a 1 2 ]
+[v ___aomod@counter counter `uc  1 a 1 1 ]
+"7
+[v ___aomod@divisor divisor `o  1 p 8 0 ]
+[v ___aomod@dividend dividend `o  1 p 8 8 ]
+"36
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+{
+"12
+[v ___aodiv@quotient quotient `o  1 a 8 3 ]
+"13
+[v ___aodiv@sign sign `uc  1 a 1 2 ]
+[v ___aodiv@counter counter `uc  1 a 1 1 ]
+"7
+[v ___aodiv@divisor divisor `o  1 p 8 0 ]
+[v ___aodiv@dividend dividend `o  1 p 8 8 ]
+"43
+} 0
+"21 H:\group-proj\group-proj.X\delay.c
+[v _delay_init delay_init `(v  1 e 1 0 ]
+{
+"25
+} 0
+"13
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"19
+} 0

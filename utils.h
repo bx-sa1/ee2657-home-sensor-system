@@ -31,6 +31,12 @@
 #ifndef UTILS_H
 #define	UTILS_H
 
+typedef uint16_t FIXED;
+
+#define TO_FIXED(x) (uint16_t)(x * 100)
+#define FROM_FIXED(x) (uint8_t)(x / 100)
+#define REMAINDER_FROM_FIXED(x) (uint8_t)(x % 100)
+
 int itoa(long long value, unsigned char *str);
 
 #endif	/* XC_HEADER_TEMPLATE_H */

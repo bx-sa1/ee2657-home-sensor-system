@@ -1,115 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"4 ./keypad.h
-[; ;./keypad.h: 4: void keypad_scan();
-[v _keypad_scan `(v ~T0 @X0 0 e? ]
-"5
-[; ;./keypad.h: 5: int keypad_read(uint8_t *value, char *char_value);
-[v _keypad_read `(i ~T0 @X0 0 ef2`*uc`*uc ]
-"37 ./lcd.h
-[; ;./lcd.h: 37: void lcd_char(char c);
-[v _lcd_char `(v ~T0 @X0 0 ef1`uc ]
-[v F12154 `(v ~T0 @X0 0 t? ]
-"35 ./delay.h
-[; ;./delay.h: 35: void delay(long long t, void (*f)());
-[v _delay `(v ~T0 @X0 0 ef2`o`*F12154 ]
-[v F12191 `(v ~T0 @X0 0 t? ]
-[p mainexit ]
-"739 C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h
-[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h: 739: extern volatile unsigned char TRISB __attribute__((address(0x012)));
-[v _TRISB `Vuc ~T0 @X0 0 e@18 ]
-"677
-[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h: 677: extern volatile unsigned char TRISA __attribute__((address(0x011)));
-[v _TRISA `Vuc ~T0 @X0 0 e@17 ]
-"33494
-[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h: 33494: extern volatile unsigned char ANSELA __attribute__((address(0x1F38)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@7992 ]
-"364
-[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h: 364:     struct {
-[s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . INTEDG . PEIE GIE ]
-"363
-[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h: 363: typedef union {
-[u S30 `S31 1 ]
-[n S30 . . ]
-"371
-[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h: 371: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"34 ./delay.h
-[; ;./delay.h: 34: void delay_init();
-[v _delay_init `(v ~T0 @X0 0 e? ]
-"36 ./lcd.h
-[; ;./lcd.h: 36: void lcd_init();
-[v _lcd_init `(v ~T0 @X0 0 e? ]
-"34 ./sensors.h
-[; ;./sensors.h: 34: void sensors_init();
-[v _sensors_init `(v ~T0 @X0 0 e? ]
-"97 main.c
-[; ;main.c: 97:     enum State state = LOGIN;
-[c E12193 0 1 2 .. ]
-[n E12193 State LOGIN HUMIDITY TEMPERATURE  ]
-"39 ./lcd.h
-[; ;./lcd.h: 39: void lcd_display_cursor(unsigned char line, unsigned char position);
-[v _lcd_display_cursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"38
-[; ;./lcd.h: 38: void lcd_display_message(const char * msg);
-[v _lcd_display_message `(v ~T0 @X0 0 ef1`*Cuc ]
-"34
-[; ;./lcd.h: 34: void lcd_clear();
-[v _lcd_clear `(v ~T0 @X0 0 e? ]
-[v F12199 `(v ~T0 @X0 0 t? ]
-"36 ./sensors.h
-[; ;./sensors.h: 36: void sensors_read_humidity(uint8_t *humidity_q, uint8_t *humidity_r);
-[v _sensors_read_humidity `(v ~T0 @X0 0 ef2`*uc`*uc ]
-"40 ./utils.h
-[; ;./utils.h: 40: int itoa(long long value, unsigned char *str);
-[v _itoa `(i ~T0 @X0 0 ef2`o`*uc ]
-"35 ./sensors.h
-[; ;./sensors.h: 35: void sensors_read_temperature(uint8_t *celsius_q, uint8_t *celsius_r);
-[v _sensors_read_temperature `(v ~T0 @X0 0 ef2`*uc`*uc ]
-"13 main.c
-[p x FEXTOSC  =  ECH     ]
-"14
-[p x RSTOSC  =  HFINT32  ]
-"15
-[p x CLKOUTEN  =  OFF    ]
-"16
-[p x CSWEN  =  ON        ]
-"17
-[p x FCMEN  =  ON        ]
-"20
-[p x MCLRE  =  ON        ]
-"21
-[p x PWRTE  =  OFF       ]
-"22
-[p x LPBOREN  =  OFF     ]
-"23
-[p x BOREN  =  ON        ]
-"24
-[p x BORV  =  LO         ]
-"25
-[p x ZCD  =  OFF         ]
-"26
-[p x PPS1WAY  =  ON      ]
-"27
-[p x STVREN  =  ON       ]
-"30
-[p x WDTCPS  =  WDTCPS_31 ]
-"31
-[p x WDTE  =  OFF        ]
-"32
-[p x WDTCWS  =  WDTCWS_7 ]
-"33
-[p x WDTCCS  =  SC       ]
-"36
-[p x WRT  =  OFF         ]
-"37
-[p x SCANE  =  available ]
-"38
-[p x LVP  =  ON          ]
-"41
-[p x CP  =  OFF          ]
-"42
-[p x CPD  =  OFF         ]
+"957 C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h: 957: extern volatile unsigned char LATA __attribute__((address(0x016)));
+[v _LATA `Vuc ~T0 @X0 0 e@22 ]
+"391
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h: 391: extern volatile unsigned char PORTA __attribute__((address(0x00C)));
+[v _PORTA `Vuc ~T0 @X0 0 e@12 ]
 "55 C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h
 [; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1745,354 +1640,238 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36301
 [; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f18877.h: 36301: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"54 main.c
-[; ;main.c: 54: int read_pin() {
-[v _read_pin `(i ~T0 @X0 1 ef ]
+"20 keypad.c
+[; ;keypad.c: 20: void keypad_scan() {
+[v _keypad_scan `(v ~T0 @X0 1 ef ]
 {
-[e :U _read_pin ]
+[e :U _keypad_scan ]
 [f ]
-"55
-[; ;main.c: 55:     const char *actual_pin = "123456";
-[v _actual_pin `*Cuc ~T0 @X0 1 a ]
-[e = _actual_pin :s 1C ]
-"56
-[; ;main.c: 56:     char pin[7];
-[v _pin `uc ~T0 @X0 -> 7 `i a ]
-"57
-[; ;main.c: 57:     char *pin_p = pin;
-[v _pin_p `*uc ~T0 @X0 1 a ]
-[e = _pin_p &U _pin ]
-"58
-[; ;main.c: 58:     uint8_t pin_val[6];
-[v _pin_val `uc ~T0 @X0 -> 6 `i a ]
-"59
-[; ;main.c: 59:     uint8_t *pin_val_p = pin_val;
-[v _pin_val_p `*uc ~T0 @X0 1 a ]
-[e = _pin_val_p &U _pin_val ]
-"60
-[; ;main.c: 60:     uint8_t count = 0;
-[v _count `uc ~T0 @X0 1 a ]
-[e = _count -> -> 0 `i `uc ]
-"62
-[; ;main.c: 62:     while(count < 6) {
-[e $U 1614  ]
-[e :U 1615 ]
+"21
+[; ;keypad.c: 21:     static uint8_t key_scan = 0x08;
+[v F12157 `uc ~T0 @X0 1 s key_scan ]
+[i F12157
+-> -> 8 `i `uc
+]
+"23
+[; ;keypad.c: 23:     key_scan = key_scan << 1;
+[e = F12157 -> << -> F12157 `i -> 1 `i `uc ]
+"25
+[; ;keypad.c: 25:     if(key_scan >= 0x80) {
+[e $ ! >= -> F12157 `i -> 128 `i 1614  ]
 {
-"63
-[; ;main.c: 63:         keypad_scan();
-[e ( _keypad_scan ..  ]
-"64
-[; ;main.c: 64:         if(keypad_read(pin_val_p+count, pin_p+count)) {
-[e $ ! != ( _keypad_read (2 , + _pin_val_p * -> -> _count `i `x -> -> # *U _pin_val_p `i `x + _pin_p * -> -> _count `i `x -> -> # *U _pin_p `i `x -> 0 `i 1617  ]
-{
-"65
-[; ;main.c: 65:             count++;
-[e ++ _count -> -> 1 `i `uc ]
-"66
-[; ;main.c: 66:             lcd_char('*');
-[e ( _lcd_char (1 -> -> 42 `ui `uc ]
-"67
-[; ;main.c: 67:         }
-}
-[e :U 1617 ]
-"68
-[; ;main.c: 68:         delay(100, ((void*)0));
-[e ( _delay (2 , -> -> 100 `i `o -> -> -> 0 `i `*v `*F12191 ]
-"69
-[; ;main.c: 69:     }
+"26
+[; ;keypad.c: 26:         key_scan = 0x08;
+[e = F12157 -> -> 8 `i `uc ]
+"27
+[; ;keypad.c: 27:     }
 }
 [e :U 1614 ]
-"62
-[; ;main.c: 62:     while(count < 6) {
-[e $ < -> _count `i -> 6 `i 1615  ]
-[e :U 1616 ]
-"70
-[; ;main.c: 70:     pin_p[6] = '\0';
-[e = *U + _pin_p * -> -> 6 `i `x -> -> # *U _pin_p `i `x -> -> 0 `ui `uc ]
-"72
-[; ;main.c: 72:     for(int i = 0; i < 7; i++){
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 7 `i 1618  ]
-[e $U 1619  ]
-[e :U 1618 ]
-{
-"73
-[; ;main.c: 73:         if(pin[i] != actual_pin[i]) {
-[e $ ! != -> *U + &U _pin * -> -> _i `ui `ux -> -> # *U &U _pin `ui `ux `i -> *U + _actual_pin * -> _i `x -> -> # *U _actual_pin `i `x `i 1621  ]
-{
-"74
-[; ;main.c: 74:             return 0;
-[e ) -> 0 `i ]
-[e $UE 1613  ]
-"75
-[; ;main.c: 75:         }
-}
-[e :U 1621 ]
-"76
-[; ;main.c: 76:     }
-}
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 7 `i 1618  ]
-[e :U 1619 ]
-}
-"78
-[; ;main.c: 78:     return 1;
-[e ) -> 1 `i ]
-[e $UE 1613  ]
-"79
-[; ;main.c: 79: }
+"29
+[; ;keypad.c: 29:     LATA = key_scan;
+[e = _LATA F12157 ]
+"30
+[; ;keypad.c: 30: }
 [e :UE 1613 ]
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
-"88
-[; ;main.c: 88: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
+"32
+[; ;keypad.c: 32: int keypad_read(uint8_t *value, char *char_value) {
+[v _keypad_read `(i ~T0 @X0 1 ef2`*uc`*uc ]
 {
-[e :U _main ]
+[e :U _keypad_read ]
+[v _value `*uc ~T0 @X0 1 r1 ]
+[v _char_value `*uc ~T0 @X0 1 r2 ]
 [f ]
-"89
-[; ;main.c: 89:     TRISB = 0x00;
-[e = _TRISB -> -> 0 `i `uc ]
-"90
-[; ;main.c: 90:     TRISA = 0b00000111;
-[e = _TRISA -> -> 7 `i `uc ]
-"91
-[; ;main.c: 91:     ANSELA = 0x00;
-[e = _ANSELA -> -> 0 `i `uc ]
-"92
-[; ;main.c: 92:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"93
-[; ;main.c: 93:     delay_init();
-[e ( _delay_init ..  ]
-"94
-[; ;main.c: 94:     lcd_init();
-[e ( _lcd_init ..  ]
-"95
-[; ;main.c: 95:     sensors_init();
-[e ( _sensors_init ..  ]
-"97
-[; ;main.c: 97:     enum State state = LOGIN;
-[v _state `E12193 ~T0 @X0 1 a ]
-[e = _state . `E12193 0 ]
-"99
-[; ;main.c: 99:     for(;;) {
+"33
+[; ;keypad.c: 33:     if((PORTA & 0x07) != 0) {
+[e $ ! != & -> _PORTA `i -> 7 `i -> 0 `i 1616  ]
 {
+"34
+[; ;keypad.c: 34:         switch(PORTA) {
+[e $U 1618  ]
+{
+"35
+[; ;keypad.c: 35:             case 0b01000100:
+[e :U 1619 ]
+"36
+[; ;keypad.c: 36:                 *char_value = '1';
+[e = *U _char_value -> -> 49 `ui `uc ]
+"37
+[; ;keypad.c: 37:                 *value = 1;
+[e = *U _value -> -> 1 `i `uc ]
+"38
+[; ;keypad.c: 38:                 break;
+[e $U 1617  ]
+"39
+[; ;keypad.c: 39:             case 0b01000010:
+[e :U 1620 ]
+"40
+[; ;keypad.c: 40:                 *char_value = '2';
+[e = *U _char_value -> -> 50 `ui `uc ]
+"41
+[; ;keypad.c: 41:                 *value = 2;
+[e = *U _value -> -> 2 `i `uc ]
+"42
+[; ;keypad.c: 42:                 break;
+[e $U 1617  ]
+"43
+[; ;keypad.c: 43:             case 0b01000001:
+[e :U 1621 ]
+"44
+[; ;keypad.c: 44:                 *char_value = '3';
+[e = *U _char_value -> -> 51 `ui `uc ]
+"45
+[; ;keypad.c: 45:                 *value = 3;
+[e = *U _value -> -> 3 `i `uc ]
+"46
+[; ;keypad.c: 46:                 break;
+[e $U 1617  ]
+"47
+[; ;keypad.c: 47:             case 0b00100100:
+[e :U 1622 ]
+"48
+[; ;keypad.c: 48:                 *char_value = '4';
+[e = *U _char_value -> -> 52 `ui `uc ]
+"49
+[; ;keypad.c: 49:                 *value = 4;
+[e = *U _value -> -> 4 `i `uc ]
+"50
+[; ;keypad.c: 50:                 break;
+[e $U 1617  ]
+"51
+[; ;keypad.c: 51:             case 0b00100010:
 [e :U 1623 ]
-{
-"100
-[; ;main.c: 100:         switch(state) {
-[e $U 1627  ]
-{
-"101
-[; ;main.c: 101:             case LOGIN:
-[e :U 1628 ]
-"102
-[; ;main.c: 102:                 lcd_display_cursor(0,0);
-[e ( _lcd_display_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"103
-[; ;main.c: 103:                 lcd_display_message("Welcome!");
-[e ( _lcd_display_message (1 :s 2C ]
-"104
-[; ;main.c: 104:                 lcd_display_cursor(1,0);
-[e ( _lcd_display_cursor (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-"105
-[; ;main.c: 105:                 lcd_display_message("Enter PIN:");
-[e ( _lcd_display_message (1 :s 3C ]
-"106
-[; ;main.c: 106:                 if(!read_pin()) {
-[e $ ! ! != ( _read_pin ..  -> 0 `i 1629  ]
-{
-"107
-[; ;main.c: 107:                     lcd_clear();
-[e ( _lcd_clear ..  ]
-"108
-[; ;main.c: 108:                     lcd_display_cursor(0,0);
-[e ( _lcd_display_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"109
-[; ;main.c: 109:                     lcd_display_message("PIN is incorrect");
-[e ( _lcd_display_message (1 :s 4C ]
-"110
-[; ;main.c: 110:                     delay(5000, ((void*)0));
-[e ( _delay (2 , -> -> 5000 `i `o -> -> -> 0 `i `*v `*F12199 ]
-"111
-[; ;main.c: 111:                     lcd_clear();
-[e ( _lcd_clear ..  ]
-"112
-[; ;main.c: 112:                 } else {
-}
-[e $U 1630  ]
-[e :U 1629 ]
-{
-"113
-[; ;main.c: 113:                     state = HUMIDITY;
-[e = _state . `E12193 1 ]
-"114
-[; ;main.c: 114:                     lcd_clear();
-[e ( _lcd_clear ..  ]
-"115
-[; ;main.c: 115:                 }
-}
-[e :U 1630 ]
-"116
-[; ;main.c: 116:                 break;
-[e $U 1626  ]
-"117
-[; ;main.c: 117:             case HUMIDITY:
-[e :U 1631 ]
-"118
-[; ;main.c: 118:                 lcd_display_cursor(0, 0);
-[e ( _lcd_display_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"119
-[; ;main.c: 119:                 lcd_display_message("Hmd: ");
-[e ( _lcd_display_message (1 :s 5C ]
-"121
-[; ;main.c: 121:                 uint8_t hq = 0, hr = 0;
-[v _hq `uc ~T0 @X0 1 a ]
-[e = _hq -> -> 0 `i `uc ]
-[v _hr `uc ~T0 @X0 1 a ]
-[e = _hr -> -> 0 `i `uc ]
-"122
-[; ;main.c: 122:                 sensors_read_humidity(&hq, &hr);
-[e ( _sensors_read_humidity (2 , &U _hq &U _hr ]
-"123
-[; ;main.c: 123:                 char hqc[4]; itoa(hq, hqc);
-[v _hqc `uc ~T0 @X0 -> 4 `i a ]
-[e ( _itoa (2 , -> _hq `o -> &U _hqc `*uc ]
-"124
-[; ;main.c: 124:                 char hrc[3]; itoa(hr, hrc);
-[v _hrc `uc ~T0 @X0 -> 3 `i a ]
-[e ( _itoa (2 , -> _hr `o -> &U _hrc `*uc ]
-"125
-[; ;main.c: 125:                 lcd_display_message(hqc);
-[e ( _lcd_display_message (1 -> &U _hqc `*Cuc ]
-"126
-[; ;main.c: 126:                 lcd_display_message(".");
-[e ( _lcd_display_message (1 :s 6C ]
-"127
-[; ;main.c: 127:                 lcd_display_message(hrc);
-[e ( _lcd_display_message (1 -> &U _hrc `*Cuc ]
-"128
-[; ;main.c: 128:                 lcd_display_message("%RH");
-[e ( _lcd_display_message (1 :s 7C ]
-"129
-[; ;main.c: 129:                 break;
-[e $U 1626  ]
-"130
-[; ;main.c: 130:             case TEMPERATURE:
-[e :U 1632 ]
-"131
-[; ;main.c: 131:                 lcd_display_cursor(0, 0);
-[e ( _lcd_display_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"132
-[; ;main.c: 132:                 lcd_display_message("Temp: ");
-[e ( _lcd_display_message (1 :s 8C ]
-"134
-[; ;main.c: 134:                 uint8_t tq = 0, tr = 0;
-[v _tq `uc ~T0 @X0 1 a ]
-[e = _tq -> -> 0 `i `uc ]
-[v _tr `uc ~T0 @X0 1 a ]
-[e = _tr -> -> 0 `i `uc ]
-"135
-[; ;main.c: 135:                 sensors_read_temperature(&tq, &tr);
-[e ( _sensors_read_temperature (2 , &U _tq &U _tr ]
-"136
-[; ;main.c: 136:                 char tqc[4]; itoa(tq, tqc);
-[v _tqc `uc ~T0 @X0 -> 4 `i a ]
-[e ( _itoa (2 , -> _tq `o -> &U _tqc `*uc ]
-"137
-[; ;main.c: 137:                 lcd_display_message(tqc);
-[e ( _lcd_display_message (1 -> &U _tqc `*Cuc ]
-"138
-[; ;main.c: 138:                 break;
-[e $U 1626  ]
-"139
-[; ;main.c: 139:         }
-}
-[e $U 1626  ]
-[e :U 1627 ]
-[e [\ -> _state `ui , $ -> . `E12193 0 `ui 1628
- , $ -> . `E12193 1 `ui 1631
- , $ -> . `E12193 2 `ui 1632
- 1626 ]
-[e :U 1626 ]
-"141
-[; ;main.c: 141:         if(state != LOGIN) {
-[e $ ! != -> _state `ui -> . `E12193 0 `ui 1633  ]
-{
-"142
-[; ;main.c: 142:             uint8_t kv, k;
-[v _kv `uc ~T0 @X0 1 a ]
-[v _k `uc ~T0 @X0 1 a ]
-"143
-[; ;main.c: 143:             keypad_scan();
-[e ( _keypad_scan ..  ]
-"144
-[; ;main.c: 144:             if(keypad_read(&kv, &k)) {
-[e $ ! != ( _keypad_read (2 , &U _kv -> &U _k `*uc -> 0 `i 1634  ]
-{
-"145
-[; ;main.c: 145:                 switch(kv) {
-[e $U 1636  ]
-{
-"146
-[; ;main.c: 146:                     case 1:
-[e :U 1637 ]
-"147
-[; ;main.c: 147:                         lcd_clear();
-[e ( _lcd_clear ..  ]
-"148
-[; ;main.c: 148:                         state = HUMIDITY;
-[e = _state . `E12193 1 ]
-"149
-[; ;main.c: 149:                         break;
-[e $U 1635  ]
-"150
-[; ;main.c: 150:                     case 2:
-[e :U 1638 ]
-"151
-[; ;main.c: 151:                         lcd_clear();
-[e ( _lcd_clear ..  ]
-"152
-[; ;main.c: 152:                         state = TEMPERATURE;
-[e = _state . `E12193 2 ]
-"153
-[; ;main.c: 153:                         break;
-[e $U 1635  ]
-"154
-[; ;main.c: 154:                 }
-}
-[e $U 1635  ]
-[e :U 1636 ]
-[e [\ -> _kv `i , $ -> 1 `i 1637
- , $ -> 2 `i 1638
- 1635 ]
-[e :U 1635 ]
-"155
-[; ;main.c: 155:             }
-}
-[e :U 1634 ]
-"156
-[; ;main.c: 156:         }
-}
-[e :U 1633 ]
-"157
-[; ;main.c: 157:     }
-}
-[e $U 1623  ]
+"52
+[; ;keypad.c: 52:                 *char_value = '5';
+[e = *U _char_value -> -> 53 `ui `uc ]
+"53
+[; ;keypad.c: 53:                 *value = 5;
+[e = *U _value -> -> 5 `i `uc ]
+"54
+[; ;keypad.c: 54:                 break;
+[e $U 1617  ]
+"55
+[; ;keypad.c: 55:             case 0b00100001:
 [e :U 1624 ]
+"56
+[; ;keypad.c: 56:                 *char_value = '6';
+[e = *U _char_value -> -> 54 `ui `uc ]
+"57
+[; ;keypad.c: 57:                 *value = 6;
+[e = *U _value -> -> 6 `i `uc ]
+"58
+[; ;keypad.c: 58:                 break;
+[e $U 1617  ]
+"59
+[; ;keypad.c: 59:             case 0b00010100:
+[e :U 1625 ]
+"60
+[; ;keypad.c: 60:                 *char_value = '7';
+[e = *U _char_value -> -> 55 `ui `uc ]
+"61
+[; ;keypad.c: 61:                 *value = 7;
+[e = *U _value -> -> 7 `i `uc ]
+"62
+[; ;keypad.c: 62:                 break;
+[e $U 1617  ]
+"63
+[; ;keypad.c: 63:             case 0b00010010:
+[e :U 1626 ]
+"64
+[; ;keypad.c: 64:                 *char_value = '8';
+[e = *U _char_value -> -> 56 `ui `uc ]
+"65
+[; ;keypad.c: 65:                 *value = 8;
+[e = *U _value -> -> 8 `i `uc ]
+"66
+[; ;keypad.c: 66:                 break;
+[e $U 1617  ]
+"67
+[; ;keypad.c: 67:             case 0b00010001:
+[e :U 1627 ]
+"68
+[; ;keypad.c: 68:                 *char_value = '9';
+[e = *U _char_value -> -> 57 `ui `uc ]
+"69
+[; ;keypad.c: 69:                 *value = 9;
+[e = *U _value -> -> 9 `i `uc ]
+"70
+[; ;keypad.c: 70:                 break;
+[e $U 1617  ]
+"71
+[; ;keypad.c: 71:             case 0b00001100:
+[e :U 1628 ]
+"72
+[; ;keypad.c: 72:                 *char_value = '*';
+[e = *U _char_value -> -> 42 `ui `uc ]
+"73
+[; ;keypad.c: 73:                 *value = 11;
+[e = *U _value -> -> 11 `i `uc ]
+"74
+[; ;keypad.c: 74:                 break;
+[e $U 1617  ]
+"75
+[; ;keypad.c: 75:             case 0b00001010:
+[e :U 1629 ]
+"76
+[; ;keypad.c: 76:                 *char_value = '0';
+[e = *U _char_value -> -> 48 `ui `uc ]
+"77
+[; ;keypad.c: 77:                 *value = 10;
+[e = *U _value -> -> 10 `i `uc ]
+"78
+[; ;keypad.c: 78:                 break;
+[e $U 1617  ]
+"79
+[; ;keypad.c: 79:             case 0b00001001:
+[e :U 1630 ]
+"80
+[; ;keypad.c: 80:                 *char_value = '#';
+[e = *U _char_value -> -> 35 `ui `uc ]
+"81
+[; ;keypad.c: 81:                 *value = 12;
+[e = *U _value -> -> 12 `i `uc ]
+"82
+[; ;keypad.c: 82:                 break;
+[e $U 1617  ]
+"83
+[; ;keypad.c: 83:             default:
+[e :U 1631 ]
+"84
+[; ;keypad.c: 84:                 return 0;
+[e ) -> 0 `i ]
+[e $UE 1615  ]
+"85
+[; ;keypad.c: 85:         }
 }
-"158
-[; ;main.c: 158: }
-[e :UE 1622 ]
+[e $U 1617  ]
+[e :U 1618 ]
+[e [\ -> _PORTA `i , $ -> 68 `i 1619
+ , $ -> 66 `i 1620
+ , $ -> 65 `i 1621
+ , $ -> 36 `i 1622
+ , $ -> 34 `i 1623
+ , $ -> 33 `i 1624
+ , $ -> 20 `i 1625
+ , $ -> 18 `i 1626
+ , $ -> 17 `i 1627
+ , $ -> 12 `i 1628
+ , $ -> 10 `i 1629
+ , $ -> 9 `i 1630
+ 1631 ]
+[e :U 1617 ]
+"87
+[; ;keypad.c: 87:         return 1;
+[e ) -> 1 `i ]
+[e $UE 1615  ]
+"88
+[; ;keypad.c: 88:     }
 }
-[a 4C 80 73 78 32 105 115 32 105 110 99 111 114 114 101 99 116 0 ]
-[a 7C 37 82 72 0 ]
-[a 3C 69 110 116 101 114 32 80 73 78 58 0 ]
-[a 1C 49 50 51 52 53 54 0 ]
-[a 6C 46 0 ]
-[a 2C 87 101 108 99 111 109 101 33 0 ]
-[a 8C 84 101 109 112 58 32 0 ]
-[a 5C 72 109 100 58 32 0 ]
+[e :U 1616 ]
+"90
+[; ;keypad.c: 90:     return 0;
+[e ) -> 0 `i ]
+[e $UE 1615  ]
+"91
+[; ;keypad.c: 91: }
+[e :UE 1615 ]
+}

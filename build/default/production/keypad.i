@@ -1,4 +1,4 @@
-# 1 "delay.c"
+# 1 "keypad.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "delay.c" 2
+# 1 "keypad.c" 2
+
 
 
 
@@ -20733,40 +20734,85 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\xc.h" 2 3
-# 8 "delay.c" 2
+# 9 "keypad.c" 2
 
-# 1 "./delay.h" 1
-# 34 "./delay.h"
-void delay_init();
-void delay(long long t, void (*f)());
-# 9 "delay.c" 2
+# 1 "./keypad.h" 1
 
 
-long long delay_time = 0;
 
-void __attribute__((picinterrupt(("")))) isr(void) {
-    TMR0L = 156;
-    PIR0bits.TMR0IF = 0;
-    if(delay_time != 0) {
-        delay_time--;
+void keypad_scan();
+int keypad_read(uint8_t *value, char *char_value);
+# 10 "keypad.c" 2
+# 20 "keypad.c"
+void keypad_scan() {
+    static uint8_t key_scan = 0x08;
+
+    key_scan = key_scan << 1;
+
+    if(key_scan >= 0x80) {
+        key_scan = 0x08;
     }
+
+    LATA = key_scan;
 }
 
-void delay_init() {
-    T0CON0 = 0b10000000;
-    T0CON1 = 0b01000101;
-    PIE0bits.TMR0IE = 1;
-}
-
-void delay(long long t, void (*f)(void)) {
-    TMR0L = 0;
-    PIR0bits.TMR0IF=0;
-
-    delay_time = t;
-
-    while(delay_time != 0) {
-        if(f != ((void*)0)) {
-            (*f)();
+int keypad_read(uint8_t *value, char *char_value) {
+    if((PORTA & 0x07) != 0) {
+        switch(PORTA) {
+            case 0b01000100:
+                *char_value = '1';
+                *value = 1;
+                break;
+            case 0b01000010:
+                *char_value = '2';
+                *value = 2;
+                break;
+            case 0b01000001:
+                *char_value = '3';
+                *value = 3;
+                break;
+            case 0b00100100:
+                *char_value = '4';
+                *value = 4;
+                break;
+            case 0b00100010:
+                *char_value = '5';
+                *value = 5;
+                break;
+            case 0b00100001:
+                *char_value = '6';
+                *value = 6;
+                break;
+            case 0b00010100:
+                *char_value = '7';
+                *value = 7;
+                break;
+            case 0b00010010:
+                *char_value = '8';
+                *value = 8;
+                break;
+            case 0b00010001:
+                *char_value = '9';
+                *value = 9;
+                break;
+            case 0b00001100:
+                *char_value = '*';
+                *value = 11;
+                break;
+            case 0b00001010:
+                *char_value = '0';
+                *value = 10;
+                break;
+            case 0b00001001:
+                *char_value = '#';
+                *value = 12;
+                break;
+            default:
+                return 0;
         }
+
+        return 1;
     }
+
+    return 0;
 }

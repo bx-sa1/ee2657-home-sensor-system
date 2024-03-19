@@ -116,16 +116,16 @@ void main(void) {
                 break;
             case HUMIDITY:
                 lcd_display_cursor(0, 0);
-                lcd_display_message("Humidity: ");
+                lcd_display_message("Hmd: ");
                 
                 uint8_t hq = 0, hr = 0;
                 sensors_read_humidity(&hq, &hr);
-                char hqc[4], hrc[3];
-                itoa(hq, hqc); itoa(hr/1024, hrc);
+                char hqc[4]; itoa(hq, hqc);
+                char hrc[3]; itoa(hr, hrc);
                 lcd_display_message(hqc);
                 lcd_display_message(".");
                 lcd_display_message(hrc);
-                lcd_display_message("%");
+                lcd_display_message("%RH");
                 break;
             case TEMPERATURE:
                 lcd_display_cursor(0, 0);
@@ -133,13 +133,8 @@ void main(void) {
                 
                 uint8_t tq = 0, tr = 0;
                 sensors_read_temperature(&tq, &tr);
-                char tqc[4], trc[3];
-                itoa(tq, tqc); itoa(tr/1024, trc);
+                char tqc[4]; itoa(tq, tqc);
                 lcd_display_message(tqc);
-                lcd_display_message(".");
-                lcd_display_message(trc);
-                lcd_display_message("C");
-                delay(5000, NULL);
                 break;   
         }
         

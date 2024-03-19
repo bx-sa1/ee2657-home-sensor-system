@@ -1,4 +1,4 @@
-# 1 "delay.c"
+# 1 "sesnors.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "delay.c" 2
+# 1 "sesnors.c" 2
 
 
 
@@ -20733,40 +20733,46 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\xc.h" 2 3
-# 8 "delay.c" 2
+# 8 "sesnors.c" 2
 
-# 1 "./delay.h" 1
-# 34 "./delay.h"
-void delay_init();
-void delay(long long t, void (*f)());
-# 9 "delay.c" 2
+# 1 "./sensors.h" 1
+# 34 "./sensors.h"
+void sensors_init();
+void sensors_read_temperature(uint8_t *celsius_q, uint8_t *celsius_r);
+void sensors_read_humidity(uint8_t *humidity_q, uint8_t *humidity_r);
+# 9 "sesnors.c" 2
+
+# 1 "./utils.h" 1
+# 34 "./utils.h"
+typedef uint16_t FIXED;
 
 
-long long delay_time = 0;
 
-void __attribute__((picinterrupt(("")))) isr(void) {
-    TMR0L = 156;
-    PIR0bits.TMR0IF = 0;
-    if(delay_time != 0) {
-        delay_time--;
-    }
+
+
+int itoa(long long value, unsigned char *str);
+# 10 "sesnors.c" 2
+# 19 "sesnors.c"
+void sensors_init() {
+    ADCON0 = 0b10000100;
+    ANSELC = 0b11100000;
+    TRISC = 0b11100000;
 }
 
-void delay_init() {
-    T0CON0 = 0b10000000;
-    T0CON1 = 0b01000101;
-    PIE0bits.TMR0IE = 1;
+void sensors_read_temperature(uint8_t *celsius_q, uint8_t *celsius_r) {
+    ADPCH = 0b010111;
+    ADCON0bits.ADGO = 1;
+    while(ADCON0bits.ADGO);
+    uint16_t temp = ((ADRESH << 8) + ADRESL);
+    *celsius_q = temp;
+    *celsius_r = temp;
 }
 
-void delay(long long t, void (*f)(void)) {
-    TMR0L = 0;
-    PIR0bits.TMR0IF=0;
-
-    delay_time = t;
-
-    while(delay_time != 0) {
-        if(f != ((void*)0)) {
-            (*f)();
-        }
-    }
+void sensors_read_humidity(uint8_t *humidity_q, uint8_t *humidity_r) {
+    ADPCH = 0b010110;
+    ADCON0bits.ADGO = 1;
+    while(ADCON0bits.ADGO);
+    uint16_t humidity = ((ADRESH << 8) + ADRESL);
+    *humidity_q = (uint8_t)((((uint16_t)(humidity * 100)/(uint16_t)(1023 * 100)) * (uint16_t)(127 * 100)) + 20 / 100);
+    *humidity_r = (uint8_t)((uint8_t)((((uint16_t)(humidity * 100)/(uint16_t)(1023 * 100)) * (uint16_t)(127 * 100)) + 20 % 100) / 100);
 }

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ee2657-home-sensor-system
+PROJECTNAME=group-proj.X
 
 # Active Configuration
 DEFAULTCONF=default
